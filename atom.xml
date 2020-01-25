@@ -5,9 +5,9 @@
   <subtitle>FEARLESS ALONE</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://lisaipeng.cn/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2020-01-14T18:29:40.297Z</updated>
-  <id>http://lisaipeng.cn/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Guran</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>My first blog</title>
-    <link href="http://lisaipeng.cn/2020/01/14/2020-01-14-My-first-blog/"/>
-    <id>http://lisaipeng.cn/2020/01/14/2020-01-14-My-first-blog/</id>
+    <link href="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/"/>
+    <id>http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/</id>
     <published>2020-01-14T14:32:24.000Z</published>
     <updated>2020-01-14T18:29:40.297Z</updated>
     
@@ -35,12 +35,12 @@
     </summary>
     
     
-      <category term="test" scheme="http://lisaipeng.cn/categories/test/"/>
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
     
     
-      <category term="test" scheme="http://lisaipeng.cn/tags/test/"/>
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
     
-      <category term="hello world" scheme="http://lisaipeng.cn/tags/hello-world/"/>
+      <category term="hello world" scheme="http://yoursite.com/tags/hello-world/"/>
     
   </entry>
   
