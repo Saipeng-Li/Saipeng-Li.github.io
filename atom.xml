@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>经年</title>
+  <title>朝辞</title>
   
-  <subtitle>FEARLESS ALONE</subtitle>
+  <subtitle>Have a nice day!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-29T14:52:01.095Z</updated>
+  <updated>2020-07-12T15:16:24.547Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Guran</name>
+    <name>Zhaoci</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Talend Open Studio for Data Integration入门指南</title>
+    <link href="http://yoursite.com/2020/07/12/Talend%20Open%20Studio%20for%20Data%20Integration%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2020/07/12/Talend%20Open%20Studio%20for%20Data%20Integration%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2020-07-12T15:06:00.000Z</published>
+    <updated>2020-07-12T15:16:24.547Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Talend-Open-Studio-for-Data-Integration入门指南"><a href="#Talend-Open-Studio-for-Data-Integration入门指南" class="headerlink" title="Talend Open Studio for Data Integration入门指南"></a>Talend Open Studio for Data Integration入门指南</h1><blockquote><p> <a href="http://www.docin.com/p-635429817.html" target="_blank" rel="noopener">http://www.docin.com/p-635429817.html</a> </p></blockquote><blockquote><p><a href="https://help.talend.com/reader/7hgjT5MQXu0xS9dSnR0iyg/DiI47n6mRgfPN0VpR5RdRQ" target="_blank" rel="noopener">https://help.talend.com/reader/7hgjT5MQXu0xS9dSnR0iyg/DiI47n6mRgfPN0VpR5RdRQ</a> </p></blockquote><blockquote><p><a href="https://help.talend.com/reader/SZ38A55h3ojQJL~paOP16g/_nrE2Ff2sAylaqNGOFz73Q" target="_blank" rel="noopener">https://help.talend.com/reader/SZ38A55h3ojQJL~paOP16g/_nrE2Ff2sAylaqNGOFz73Q</a> </p></blockquote><h2 id="Talend"><a href="#Talend" class="headerlink" title="Talend"></a>Talend</h2><p>Talend是一种ETL(Extraction-Transformation-Loading 数据提取-转换-加载)工具。主要是负责完成数据从数据源向目标数据仓库转化的过程，是实施数据仓库的重要步骤。</p><p>Talend，中文名拓蓝，一家专业的开源集成软件公司。Talend是市场上唯一提供集数据集成、数据分析及清洗，主数据管理，应用集成为一体的软件提供商。</p><p>Talend Open Studio for Integration工具可执行数据仓库到数据库之间的数据同步，提供基于Eclipse RCP的图形操作界面。</p><h2 id="登录Talend-Studio"><a href="#登录Talend-Studio" class="headerlink" title="登录Talend Studio"></a>登录Talend Studio</h2><ol><li>在Talend Studio登录窗口中，选择Create a new project，如指定项目名称：getting_started，然后单击Finish创建一个新的本地项目.</li><li>当”其他Talend软件包”向导打开时，通过选择”必需的”和”可选的第三方库”复选框并单击”完成”来安装其他软件包.在”下载外部模块”窗口中，单击向导底部的”全部接受”按钮以接受Studio中使用的外部模块的所有许可证.</li><li>Talend页面概览:<img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggodbgf86sj31hc0sm0vr.jpg" alt="OESBBD%CGUO8CMIA{AT{D1V.png"></li></ol><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><ol><li>创建一个新的本地工程talendworkspace.</li></ol><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggogm9e8lyj30my0b9aca.jpg" alt="4BTQ97F@CBB(P3{TS{_6~1V.png"></p><ol start="2"><li>点击Welcome页面的Start now!进入Talend页面.</li></ol><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggogr7hudpj31hc0smwgp.jpg" alt="jpg"></p><p>最左侧为目录，中间区域为作业设计区和job运行区，最右边为存放所有组件的画板，中下部分为组件的一些属性设置。</p><ol start="3"><li>右击左侧存储库中的”作业设计”，点击”创建作业”如图。</li></ol><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggoh87i5rcj30nv0fddgo.jpg" alt="2{A3R{YP2ZV0L@Y~N4K_BJN.png"></p><ol start="4"><li>点击左侧”元数据”/“数据库连接”，右击选择”创建数据库连接”，并填写作业名(以字母开头)。并填写连接数据库的相关信息。</li></ol><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggohg4h7j8j30lb0hvaam.jpg" alt=")80WNHINUAI79HCZ0_7DX~A.png"></p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggoho3vfmcj30lb0m2gml.jpg" alt="DUKKNS_~}QU[8MERA]ZEIBT.png"></p><p>tips: 服务器可直接填写”localhost”.</p><p>测试连接，出现连接失败问题。修改方案如下：</p><blockquote><p><a href="https://blog.csdn.net/anaini1314/article/details/71157832" target="_blank" rel="noopener">https://blog.csdn.net/anaini1314/article/details/71157832</a> </p></blockquote><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggoi10svstj30lb0m2gmp.jpg" alt="5_71Y{XK4OX1Q4%VVTTT~Y5.png"></p><ol start="5"><li>创建完连接后，便可以使用这个连接进行作业设计抽取数据工作。</li></ol><ul><li><strong>输入、输出组件</strong>：所有的包含input和output名称的组件都是输入输出组件。根据数据库类型不同，组件也不相同。如oracle数据库的输入输出组件为:tOracleInput、tOracleOutput。<strong>输入组件</strong>主要是抽取数据并设置源数据表，然后通过<strong>输出组件</strong>设置目标表，连接上即可传送数据。</li><li><strong>tMap组件</strong>：当进行两个表的数据传输时，如果两个表的字段名字不一样，就需要这个组件进行连接。指明对应目标数据表和源数据表这两个表的字段。</li></ul><p>本地Mysql数据库创建的表数据(database:TalendTest, table:movies):</p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggojryv9wxj30wl06zdga.jpg" alt=""></p><p>然后可以将需要的组件在画板中找到并且拖到空白作业中，或者直接拖已经配置好的数据源选择组件(不需要再配置数据源)。</p><blockquote><p>假设在作业设计中新建一个作业，把Mysql数据库中movies表的数据进行抽取到另一个表中(本文movies-&gt;movies，实际上应该是不同表).</p></blockquote><p><strong>首先是input组件</strong>：</p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggok7jmdxdj311o0i1tb0.jpg" alt="79SM5_H}SN7}%UQS8ZHOJZS.png"></p><p>设置input组件信息，在查询中写sql语句查出你所抽取的信息，然后用双引号括起来。并点击属性中的Guess schema得到字段信息，如果类型不对可以修改。</p><p><strong>然后是output组件</strong>：</p><p>同样配置output组件的信息，主要是在表中填写目标表名字，表操作因为”movies”表已存在可以选择无操作，如果没有可以选择创建表等其他操作。数据操作是插入，根据需要也可以选择其他操作如更新等。</p><p><strong>最后是进行两表的连接</strong>：</p><p>点击input组件选择行-主线到output组件，然后output组件的属性中选择：同步列。获取input的字段信息。</p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggokj2xg4mj30ok0leq45.jpg" alt=""></p><p><strong>点击运行按钮</strong>：</p><p>点击运行中的运行按钮，即可运行作业进行数据抽取，完成作业。</p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggokngqbb5j30ln0gk3za.jpg" alt="png"></p><p>如图看到，4条数据被抽取过去，这里的数据结构和字段都是一样的，如果不同的话我们还需要tMap组件来进行连接。</p><p>tip: 如下图是联合两表查询出的数据结果并且保存在一个excel文件中。</p><p><img src="http://ww1.sinaimg.cn/large/007d8nWJly1ggokvvpas1j30nr089jtm.jpg" alt="1.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Talend-Open-Studio-for-Data-Integration入门指南&quot;&gt;&lt;a href=&quot;#Talend-Open-Studio-for-Data-Integration入门指南&quot; class=&quot;headerlink&quot; title=&quot;Talend
+      
+    
+    </summary>
+    
+    
+      <category term="Talend" scheme="http://yoursite.com/categories/Talend/"/>
+    
+    
+      <category term="Talend" scheme="http://yoursite.com/tags/Talend/"/>
+    
+  </entry>
   
   <entry>
     <title>My first blog</title>
