@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Talend," />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="朝辞" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Talend —— 组件入门 https:&#x2F;&#x2F;talend.github.io&#x2F;component-runtime&#x2F;main&#x2F;1.1.22&#x2F;tutorial-create-my-first-component.html   Talend组件套件Talend Component Kit是个Java框架，从两个级别上简化组件的开发：  运行时：运行时是关于将特定的组件代码注入作业或管道中。该框架有助于">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组件入门">
+<meta property="og:url" content="http://yoursite.com/2020/07/15/2020-07-16-Talend-%E7%BB%84%E4%BB%B6%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="朝辞">
+<meta property="og:description" content="Talend —— 组件入门 https:&#x2F;&#x2F;talend.github.io&#x2F;component-runtime&#x2F;main&#x2F;1.1.22&#x2F;tutorial-create-my-first-component.html   Talend组件套件Talend Component Kit是个Java框架，从两个级别上简化组件的开发：  运行时：运行时是关于将特定的组件代码注入作业或管道中。该框架有助于">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggql2eqatzj30js0et0ui.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggql7qkrbxj30y10o2di9.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlt0e39zj314j0ndgnm.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlu19idaj314j0ndtak.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlw3esrkj31hc0smnpd.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrh47ej7j30y50ohgnj.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrhpixhqj31hc0sm79v.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrm37g8jj31hc0smdl8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqv0jcjubj31hc0sm77u.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqv6anrpwj30te05lt92.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqvmilz4bj30wq0sm42t.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqvosnrs1j30sr0smae6.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrl6w6kmnj30oq0gg0t5.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrl81oatuj30qo0smtbl.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrlc3wbokj31hc0smgpv.jpg">
+<meta property="article:published_time" content="2020-07-15T05:36:00.000Z">
+<meta property="article:modified_time" content="2020-07-15T05:43:47.554Z">
+<meta property="article:author" content="Zhaoci">
+<meta property="article:tag" content="Talend">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007d8nWJgy1ggql2eqatzj30js0et0ui.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/15/2020-07-16-Talend-组件入门/"/>
+
+
+
+
+
+  <title>组件入门 | 朝辞</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">朝辞</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Have a nice day!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/2020-07-16-Talend-%E7%BB%84%E4%BB%B6%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhaoci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝辞">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">组件入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-15T13:36:00+08:00">
+                2020-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Talend/" itemprop="url" rel="index">
+                    <span itemprop="name">Talend</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2.6k word
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  9 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Talend-——-组件入门"><a href="#Talend-——-组件入门" class="headerlink" title="Talend —— 组件入门"></a>Talend —— 组件入门</h1><blockquote>
+<p><a href="https://talend.github.io/component-runtime/main/1.1.22/tutorial-create-my-first-component.html" target="_blank" rel="noopener">https://talend.github.io/component-runtime/main/1.1.22/tutorial-create-my-first-component.html</a> </p>
+</blockquote>
+<h2 id="Talend组件套件"><a href="#Talend组件套件" class="headerlink" title="Talend组件套件"></a>Talend组件套件</h2><p>Talend Component Kit是个Java框架，从两个级别上简化组件的开发：</p>
+<ul>
+<li><strong>运行时</strong>：运行时是关于将特定的组件代码注入作业或管道中。该框架有助于尽可能地统一在数据集成（DI）和BEAM环境中运行所需的代码。 </li>
+<li><strong>图形界面</strong>：该框架有助于统一所需的代码，以便能够在浏览器（Web）或基于Eclipse的Studio（SWT）中呈现组件。 </li>
+</ul>
+<p>开发的大部分内容是作为Maven或Gradle项目进行的，并且需要诸如IntelliJ之类的专用工具。</p>
+<p>组件套件由以下组件制成：</p>
+<ul>
+<li>入门程序（Starter）是一个图形界面，可用于定义开发项目的框架。</li>
+<li>用于实现组件UI和运行时的API。</li>
+<li>开发工具：Maven和Gradle包装器，验证规则，打包，Web预览等。</li>
+<li>基于JUnit 4和5的测试套件。</li>
+</ul>
+<p>通过在基本开发环境中使用此工具，可以开始创建组件。</p>
+<h2 id="Talend组件套件方法论"><a href="#Talend组件套件方法论" class="headerlink" title="Talend组件套件方法论"></a>Talend组件套件方法论</h2><p>使用组件工具包框架开发新组件包括：</p>
+<ol>
+<li>使用<a href="https://starter-toolkit.talend.io/" target="_blank" rel="noopener">启动程序</a>或<a href="https://talend.github.io/component-runtime/main/1.1.22/installing-talend-intellij-plugin.html" target="_blank" rel="noopener">Talend IntelliJ插件</a><a href="https://talend.github.io/component-runtime/main/1.1.22/index-generating-project.html" target="_blank" rel="noopener">创建项目</a>。此步骤允许构建项目的框架。它包括：<ol>
+<li>为项目中的每个组件定义常规配置模型</li>
+<li>从入门者生成和下载项目档案</li>
+<li>编译项目</li>
+</ol>
+</li>
+<li>在您的IDE中导入已编译的项目。如果您已经使用IntelliJ插件生成了项目，则不需要此步骤。</li>
+<li><a href="https://talend.github.io/component-runtime/main/1.1.22/index-creating-components.html" target="_blank" rel="noopener">实现组件</a>，包括：<ol>
+<li>通过指定组件的元数据来注册组件：族，类别，版本，图标，类型和名称。</li>
+<li>定义组件的布局和可配置部分</li>
+<li>定义组件的执行逻辑，也称为运行时。</li>
+</ol>
+</li>
+<li><a href="https://talend.github.io/component-runtime/main/1.1.22/index-testing-components.html" target="_blank" rel="noopener">测试组件</a>。</li>
+<li><a href="https://talend.github.io/component-runtime/main/1.1.22/index-deploying-components.html" target="_blank" rel="noopener">将组件部署</a>到Talend Studio或Cloud应用程序。</li>
+</ol>
+<h2 id="组件类型"><a href="#组件类型" class="headerlink" title="组件类型"></a>组件类型</h2><p>组件共有三种类型，每种类型都有其特殊性，尤其是在运行时。</p>
+<ul>
+<li><strong>输入组件</strong>：从定义的源检索要处理的数据。输入组件由以下组成：<ul>
+<li><strong>组件的执行逻辑</strong>，由<code>Mapper</code>或<code>Emitter</code>类表示。</li>
+<li><strong>组件的源逻辑</strong>，由<code>Source</code>类表示。</li>
+<li><strong>组件的布局和最终用户在使用组件时需要提供的配置</strong>（由<code>Configuration</code>类定义）。所有输入组件都必须在其配置中指定一个数据集，并且每个数据集都必须使用一个数据存储。</li>
+</ul>
+</li>
+<li><strong>处理器</strong>：处理和转换数据。处理器由以下材料制成：<ul>
+<li><strong>组件的执行逻辑</strong>，描述如何处理其接收的每个记录或记录的批次。它还描述了如何将记录传递到其输出连接。此逻辑在<code>Processor</code>类中定义。</li>
+<li><strong>组件的布局和最终用户在使用组件时需要提供的配置</strong>（由<code>Configuration</code>类定义）。</li>
+</ul>
+</li>
+<li><strong>输出组件</strong>：将处理后的数据发送到定义的目的地。输出组件由以下组成：<ul>
+<li><strong>组件的执行逻辑</strong>，描述如何处理其接收的每个记录或记录的批次。此逻辑在<code>Output</code>类中定义。与处理器不同，输出组件是执行的最后一个组件，不返回任何数据。</li>
+<li><strong>组件的布局和最终用户在使用组件时需要提供的配置</strong>（由<code>Configuration</code>类定义）。所有输入组件都必须在其配置中指定一个数据集，并且每个数据集都必须使用一个数据存储。</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建第一个组件"><a href="#创建第一个组件" class="headerlink" title="创建第一个组件"></a>创建第一个组件</h2><p>本例所创建的组件是一个简单的处理器组件，该组件<strong>从上一组件接收数据并将其显示在日志中，以及用户输入的其他信息</strong>。</p>
+<h3 id="开发环境："><a href="#开发环境：" class="headerlink" title="开发环境："></a>开发环境：</h3><ul>
+<li>Java JDK 1.8或更高版本;</li>
+<li>Talend Open Studio;</li>
+<li>下载并安装IntelliJ;</li>
+<li><a href="https://talend.github.io/component-runtime/main/1.1.22/installing-talend-intellij-plugin.html" target="_blank" rel="noopener">下载IntelliJ的Talend Component Kit插件</a>.</li>
+</ul>
+<h3 id="生成一个简单的组件项目"><a href="#生成一个简单的组件项目" class="headerlink" title="生成一个简单的组件项目"></a>生成一个简单的组件项目</h3><ol>
+<li><p>启动IntelliJ并创建一个新项目。在可用选项中，您应该看到<strong>Talend Component</strong>。 </p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggql2eqatzj30js0et0ui.jpg" alt="png"></p>
+</li>
+<li><p>确保已选择<strong>Project SDK</strong>。然后，选择<strong>Talend组件</strong>，然后单击<strong>下一步</strong>。<br>在<strong>拓蓝组件工具包入门</strong>打开。</p>
+</li>
+<li><p>输入项目详细信息。这里的目标是定义组件和项目元数据。更改默认值，如下所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggql7qkrbxj30y10o2di9.jpg" alt="png"></p>
+<ul>
+<li>该<strong>组件家庭</strong>和<strong>类别</strong>将在Talend Open Studio的后来被用来寻找新的组件。</li>
+<li>项目元数据主要用于标识项目结构。一种常见的做法是将默认值中的“公司”替换为您自己的值，例如域名。</li>
+</ul>
+</li>
+<li><p>填充完元数据后，选择<strong>添加组件</strong>。<strong>Talend组件工具包启动器</strong>中将显示一个新屏幕，可让您定义组件的常规配置。默认情况下，新组件是处理器， </p>
+</li>
+<li><p>输入组件的有效Java名称。例如，<strong>Logger</strong>。 </p>
+</li>
+<li><p>选择<strong>配置模型，</strong>然后添加一个名为的字符串字段<code>level</code>。该输入字段将在组件配置中用于输入其他信息以显示在日志中。</p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlt0e39zj314j0ndgnm.jpg" alt="png"></p>
+</li>
+<li><p>在“ <strong>输入/输出”</strong>部分中，单击默认的<strong>MAIN</strong>输入分支以访问其详细信息，并确保将记录模型设置为<strong>Generic</strong>。保留分支<strong>名称</strong>为其默认<code>MAIN</code>值。 </p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlu19idaj314j0ndtak.jpg" alt="png"></p>
+</li>
+<li><p>对默认的<strong>MAIN</strong>输出分支重复相同的步骤。</p>
+<blockquote>
+<p>因为组件是处理器，所以默认情况下它具有输出分支。没有任何输出分支的处理器被视为输出组件。选择“ <strong>激活IO”</strong>选项时，可以创建输出组件。 </p>
+</blockquote>
+</li>
+<li><p>单击“ <strong>下一步”</strong>，检查项目的名称和位置，然后单击“ <strong>完成”</strong>以在IDE中生成项目。 </p>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqlw3esrkj31hc0smnpd.jpg" alt="png"></p>
+<p>至此，您的组件在技术上已经准备好进行编译并部署到Talend Open Studio。</p>
+<ul>
+<li>根据在<strong>Talend Component Kit Starter中</strong>定义的组件的名称和类型，生成了两个类：<ul>
+<li><code>LoggerProcessor</code>是定义组件逻辑的地方;</li>
+<li><code>LoggerProcessorConfiguration</code>是定义组件布局和可配置字段的位置，其中包括在组件的配置模型中较早定义的<code>level</code>字符串字段.</li>
+</ul>
+</li>
+<li>该<strong>package-info.java</strong>文件包含了在<strong>Talend组件工具包入门</strong>中所定义的组件元数据，如家庭和类别。</li>
+<li>您还可以注意到，树结构中的元素是以在<strong>Talend Component Kit Starter</strong>定义的项目元数据命名的。</li>
+</ul>
+<p>如果以后需要编辑组件的配置，逻辑和元数据，则这些文件是起点。</p>
+<h3 id="将组件编译并部署到Talend-Open-Studio"><a href="#将组件编译并部署到Talend-Open-Studio" class="headerlink" title="将组件编译并部署到Talend Open Studio"></a>将组件编译并部署到Talend Open Studio</h3><p>无需对组件代码进行任何修改，就可以编译项目并将组件部署到Talend Open Studio的本地实例。</p>
+<p>这样，很容易检查Studio中可见的内容是否符合预期。</p>
+<blockquote>
+<p>在开始运行任何命令之前，请确保Talend Open Studio未运行。 </p>
+</blockquote>
+<ol>
+<li><p>从IntelliJ中的组件项目中，打开一个终端，并确保所选目录是项目的根目录。</p>
+</li>
+<li><p>通过运行以下命令编译项目：<code>mvnw clean install</code>。 该<code>mvnw</code>命令引用了Talend Component Kit随附的Maven包装器。它允许为您的项目使用正确版本的Maven，而无需事先手动安装。等效包装器可用于Gradle。</p>
+<p>IDEA中配置好Maven环境： </p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrh47ej7j30y50ohgnj.jpg" alt="png"></p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrhpixhqj31hc0sm79v.jpg" alt="png"></p>
+</li>
+<li><p>一旦执行了命令，并且在终端中看到了<strong>BUILD SUCCESS</strong>，请使用以下命令将组件部署到Talend Open Studio的本地实例： </p>
+<p><code>mvnw talend-component:deploy-in-studio -Dtalend.component.studioHome=&quot;&lt;path to Talend Open Studio home&gt;&quot;</code> </p>
+<p>如本例：</p>
+<p><code>mvnw talend-component:deploy-in-studio -Dtalend.component.studioHome=&quot;F:\Talend-Pro\studio-se-master\build\talend.studio.tos.di.product\target\products\org.talend.studio.tos.di.product\win32\win32\TOS_DI-20200629_1603-V7.4.1SNAPSHOT&quot;</code></p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqrm37g8jj31hc0smdl8.jpg" alt="png"></p>
+</li>
+<li><p>确保构建成功。 </p>
+</li>
+<li><p>打开<code>Talend Open Studio</code>并创建一个新的Job：</p>
+<ul>
+<li>新组件位于<strong>Talend组件工具包入门版</strong>中指定的新系列和类别中。您可以将其添加到作业中并打开其设置。</li>
+<li>请注意，出现了在<strong>Talend Component Kit Starter中</strong>组件的配置模型中指定的<code>level</code>字段。</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqv0jcjubj31hc0sm77u.jpg" alt="png"></p>
+<p>此时，您的新组件可在Talend Open Studio中使用，并且其可配置部分已经设置。但是组件逻辑仍有待定义。</p>
+</li>
+</ol>
+<h3 id="编辑组件"><a href="#编辑组件" class="headerlink" title="编辑组件"></a>编辑组件</h3><p>现在，您可以编辑组件以实现简单的逻辑：<strong>读取组件输入分支中包含的数据，以向其显示作业的执行日志。组件的级别字段的值也需要显示并更改为大写</strong>。 </p>
+<ol>
+<li><p>保存先前创建的作业，然后关闭Talend Open Studio。 </p>
+</li>
+<li><p>返回IntelliJ，打开<strong>LoggerProcessor</strong>类。这是可以定义组件逻辑的类。</p>
+</li>
+<li><p>寻找<code>@ElementListener</code>方法。它已经存在，并且引用了<strong>Talend Component Kit Starter中</strong>定义的默认输入分支，但尚未完成。 </p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqv6anrpwj30te05lt92.jpg" alt=""></p>
+</li>
+<li><p>为了能够将输入中的数据记录到控制台，请添加以下行： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Log to the console </span></span><br><span class="line">System.out.println(<span class="string">"["</span>+configuration.getLevel().toUpperCase()+<span class="string">"] "</span>+defaultInput);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<p>   <code>@ElementListener</code>现在，该方法如下所示： </p>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ElementListener</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        @Input <span class="keyword">final</span> Record defaultInput,</span></span></span><br><span class="line"><span class="function"><span class="params">        @Output <span class="keyword">final</span> OutputEmitter&lt;Record&gt; defaultOutput)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// this is the method allowing you to handle the input(s) and emit the output(s)</span></span><br><span class="line">        <span class="comment">// after some custom logic you put here, to send a value to next element you can use an</span></span><br><span class="line">        <span class="comment">// output parameter and call emit(value).</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Log to the console</span></span><br><span class="line">    System.out.println(<span class="string">"["</span>+configuration.getLevel().toUpperCase()+<span class="string">"] "</span>+defaultInput);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="5">
+<li><p>再次打开终端以编译项目并再次部署组件。为此，请依次运行以下两个命令:</p>
+<ul>
+<li><code>mvnw clean install</code></li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqvmilz4bj30wq0sm42t.jpg" alt="png"></p>
+<ul>
+<li>``mvnw talend-component:deploy-in-studio -Dtalend.component.studioHome=”<path to Talend Open Studio home>“ `</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggqvosnrs1j30sr0smae6.jpg" alt="png"></p>
+<p>现在应该将组件逻辑的更新部署到Studio。重新启动Studio后，您将准备构建作业并首次使用组件。 </p>
+</li>
+</ol>
+<h3 id="使用组件构建工作"><a href="#使用组件构建工作" class="headerlink" title="使用组件构建工作"></a>使用组件构建工作</h3><p>现在可以使用该组件了，现在该创建作业并检查其行为是否符合预期。</p>
+<ol>
+<li>再次打开Talend Open Studio，然后转到先前创建的作业。新组件仍然存在。 </li>
+<li>添加一个<strong>tRowGenerator</strong>组件并将其连接到记录器。 </li>
+<li>双击<strong>tRowGenerator</strong>以指定要生成的数据：<ul>
+<li>添加名为的第一列，<code>firstName</code>然后选择<strong>TalendDataGenerator.getFirstName（）</strong>函数。</li>
+<li>添加第二个名为“ lastName”的列，然后选择<strong>TalendDataGenerator.getLastName（）</strong>函数。</li>
+<li>将<strong>RowGenerator的行数</strong>设置为<code>10</code>。</li>
+</ul>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrl6w6kmnj30oq0gg0t5.jpg" alt="png"></p>
+<ol start="4">
+<li><p>验证<strong>tRowGenerator</strong>配置。</p>
+</li>
+<li><p>打开<strong>TutorialFamilyLogger</strong>组件，并将<strong>level</strong>字段设置为<code>info</code>。</p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrl81oatuj30qo0smtbl.jpg" alt="png"></p>
+</li>
+<li><p>转到作业的<strong>“运行”</strong>选项卡并运行作业。 作业已执行。您可以在控制台中观察到已记录的10条生成的行中的每一行都已记录，并且<code>info</code>在记录器中输入的值也与每条记录一起以大写形式显示。 </p>
+<p><img src="http://ww1.sinaimg.cn/large/007d8nWJgy1ggrlc3wbokj31hc0smgpv.jpg" alt="png"></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:left;font-size:14px;">
+<p style="text-align:center;color: #ccc;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</p>
+        </div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton"  disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="Zhaoci WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Talend/" rel="tag"># Talend</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/14/2020-07-14-Talend-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%BB%BD%E4%BD%9C%E4%B8%9A/" rel="next" title="创建第一份作业">
+                <i class="fa fa-chevron-left"></i> 创建第一份作业
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zhaoci</p>
+              <p class="site-description motion-element" itemprop="description">朝辞のBlog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Talend-——-组件入门"><span class="nav-number">1.</span> <span class="nav-text">Talend —— 组件入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Talend组件套件"><span class="nav-number">1.1.</span> <span class="nav-text">Talend组件套件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Talend组件套件方法论"><span class="nav-number">1.2.</span> <span class="nav-text">Talend组件套件方法论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件类型"><span class="nav-number">1.3.</span> <span class="nav-text">组件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建第一个组件"><span class="nav-number">1.4.</span> <span class="nav-text">创建第一个组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开发环境："><span class="nav-number">1.4.1.</span> <span class="nav-text">开发环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成一个简单的组件项目"><span class="nav-number">1.4.2.</span> <span class="nav-text">生成一个简单的组件项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将组件编译并部署到Talend-Open-Studio"><span class="nav-number">1.4.3.</span> <span class="nav-text">将组件编译并部署到Talend Open Studio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑组件"><span class="nav-number">1.4.4.</span> <span class="nav-text">编辑组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用组件构建工作"><span class="nav-number">1.4.5.</span> <span class="nav-text">使用组件构建工作</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoci</span>
+
+  
+  <a href="http://www.beian.miit.gov.cn" target="_blank" rel="noopener">豫ICP备19028733号</a>
+</div>
+
+<!--注释掉hexo强力驱动-->
+<!--
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":350,"hOffset":200,"vOffset":-100},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
