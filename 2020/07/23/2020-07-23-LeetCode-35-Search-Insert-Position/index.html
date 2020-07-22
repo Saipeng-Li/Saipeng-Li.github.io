@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="leetcode,链表,数学,Medium," />
+  <meta name="keywords" content="leetcode,数组,二分查找,Easy," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172&#x2F;&#x2F;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位">
+<meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&#x2F;&#x2F;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 &#x2F;&#x2F;&#x2F;&#x2F; 你可以假设数组中无重复元素。 &#x2F;&#x2F;&#x2F;&#x2F; 示例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode-2 Add Two Number">
-<meta property="og:url" content="http://yoursite.com/2020/07/18/2020-07-18-LeetCode-2-Add-Two-Number/index.html">
+<meta property="og:title" content="LeetCode-35 Search Insert Position">
+<meta property="og:url" content="http://yoursite.com/2020/07/23/2020-07-23-LeetCode-35-Search-Insert-Position/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172&#x2F;&#x2F;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&#x2F;&#x2F;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 &#x2F;&#x2F;&#x2F;&#x2F; 你可以假设数组中无重复元素。 &#x2F;&#x2F;&#x2F;&#x2F; 示例">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-18T15:10:00.000Z">
-<meta property="article:modified_time" content="2020-07-19T10:11:56.337Z">
+<meta property="article:published_time" content="2020-07-22T18:11:00.000Z">
+<meta property="article:modified_time" content="2020-07-22T18:11:51.772Z">
 <meta property="article:author" content="Zhaoci">
 <meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="链表">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="Medium">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="二分查找">
+<meta property="article:tag" content="Easy">
 <meta name="twitter:card" content="summary">
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/18/2020-07-18-LeetCode-2-Add-Two-Number/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/23/2020-07-23-LeetCode-35-Search-Insert-Position/"/>
 
 
 
 
 
-  <title>LeetCode-2 Add Two Number | 朝辞</title>
+  <title>LeetCode-35 Search Insert Position | 朝辞</title>
   
 
 
@@ -268,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/18/2020-07-18-LeetCode-2-Add-Two-Number/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/23/2020-07-23-LeetCode-35-Search-Insert-Position/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhaoci">
@@ -285,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode-2 Add Two Number</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode-35 Search Insert Position</h1>
         
 
         <div class="post-meta">
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-18T23:10:00+08:00">
-                2020-07-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-23T02:11:00+08:00">
+                2020-07-23
               </time>
             
 
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  367 word
+                  229 word
                 </span>
               
 
@@ -388,7 +388,7 @@
       
 
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例： </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span></span><br><span class="line"><span class="comment">//输出：7 -&gt; 0 -&gt; 8</span></span><br><span class="line"><span class="comment">//原因：342 + 465 = 807</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// Related Topics 链表 数学 </span></span><br><span class="line"><span class="comment">// 👍 4617 👎 0</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="keyword">package</span> leetcode.editor.cn;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddTwoNumbers</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Solution solution = <span class="keyword">new</span> AddTwoNumbers().<span class="keyword">new</span> Solution();</span><br><span class="line">        ListNode l1 = <span class="keyword">new</span> ListNode(<span class="number">2</span>), l2 = <span class="keyword">new</span> ListNode(<span class="number">5</span>);</span><br><span class="line">        l1.next = <span class="keyword">new</span> ListNode(<span class="number">4</span>);</span><br><span class="line">        l1.next.next = <span class="keyword">new</span> ListNode(<span class="number">3</span>);</span><br><span class="line">        l2.next = <span class="keyword">new</span> ListNode(<span class="number">6</span>);</span><br><span class="line">        l2.next.next = <span class="keyword">new</span> ListNode(<span class="number">4</span>);</span><br><span class="line">        ListNode l3 = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        l3.next = solution.addTwoNumbers(l1, l2);</span><br><span class="line">        <span class="keyword">while</span>(l3.next !=<span class="keyword">null</span>) &#123;</span><br><span class="line">            l3 = l3.next;</span><br><span class="line">            System.out.print(l3.val + <span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        ListNode next;</span><br><span class="line">        ListNode(<span class="keyword">int</span> x)&#123; val=x; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//leetcode submit region begin(Prohibit modification and deletion)</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment">     * public class ListNode &#123;</span></span><br><span class="line"><span class="comment">     *     int val;</span></span><br><span class="line"><span class="comment">     *     ListNode next;</span></span><br><span class="line"><span class="comment">     *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment">     * &#125;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">            ListNode sumHead = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">            ListNode p = l1, q = l2, currNode = sumHead;</span><br><span class="line">            <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(p!=<span class="keyword">null</span> || q!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">int</span> x = (p!=<span class="keyword">null</span>)? p.val : <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">int</span> y = (q!=<span class="keyword">null</span>)? q.val : <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">int</span> sum = carry + x + y;</span><br><span class="line">                carry = sum / <span class="number">10</span>;</span><br><span class="line">                currNode.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>);</span><br><span class="line">                currNode = currNode.next;</span><br><span class="line">                <span class="keyword">if</span>(p != <span class="keyword">null</span>)</span><br><span class="line">                    p = p.next;</span><br><span class="line">                <span class="keyword">if</span>(q != <span class="keyword">null</span>)</span><br><span class="line">                    q = q.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(carry &gt; <span class="number">0</span>)</span><br><span class="line">                currNode.next = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">            <span class="keyword">return</span> sumHead.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//leetcode submit region end(Prohibit modification and deletion)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 你可以假设数组中无重复元素。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例 1: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入: [1,3,5,6], 5</span></span><br><span class="line"><span class="comment">//输出: 2</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例 2: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入: [1,3,5,6], 2</span></span><br><span class="line"><span class="comment">//输出: 1</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例 3: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入: [1,3,5,6], 7</span></span><br><span class="line"><span class="comment">//输出: 4</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例 4: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入: [1,3,5,6], 0</span></span><br><span class="line"><span class="comment">//输出: 0</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// Related Topics 数组 二分查找 </span></span><br><span class="line"><span class="comment">// 👍 615 👎 0</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="keyword">package</span> leetcode.editor.cn;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SearchInsertPosition</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Solution solution = <span class="keyword">new</span> SearchInsertPosition().<span class="keyword">new</span> Solution();</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//leetcode submit region begin(Prohibit modification and deletion)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>, right=nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid] &gt; target)</span><br><span class="line">                right = mid-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">                left = mid+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//leetcode submit region end(Prohibit modification and deletion)</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -448,11 +448,11 @@
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag"># 链表</a>
+            <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
           
-            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+            <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" rel="tag"># 二分查找</a>
           
-            <a href="/tags/Medium/" rel="tag"># Medium</a>
+            <a href="/tags/Easy/" rel="tag"># Easy</a>
           
         </div>
       
@@ -465,8 +465,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/18/2020-07-18-LeetCode-1-Two-Sum/" rel="next" title="LeetCode-1 Two Sum">
-                <i class="fa fa-chevron-left"></i> LeetCode-1 Two Sum
+              <a href="/2020/07/23/2020-07-23-LeetCode-34-Find-First-And-Last-Position-Of-Element-In-Sorted-Array/" rel="next" title="LeetCode-34 Find First And Last Position Of Element In Sorted Array">
+                <i class="fa fa-chevron-left"></i> LeetCode-34 Find First And Last Position Of Element In Sorted Array
               </a>
             
           </div>
@@ -474,10 +474,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/19/2020-07-19-LeetCode-3-Longest-Substring-Without-Repeating-Characters/" rel="prev" title="LeetCode-3 Longest SubString Without Repeating Characters">
-                LeetCode-3 Longest SubString Without Repeating Characters <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
