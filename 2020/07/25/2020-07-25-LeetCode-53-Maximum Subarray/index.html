@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="leetcode,数组,分治算法,Easy," />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="朝辞" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode-53 Maximum Subarray">
+<meta property="og:url" content="http://yoursite.com/2020/07/25/2020-07-25-LeetCode-53-Maximum%20Subarray/index.html">
+<meta property="og:site_name" content="朝辞">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-25T04:26:00.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:56:02.089Z">
+<meta property="article:author" content="Zhaoci">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="分治算法">
+<meta property="article:tag" content="Easy">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/25/2020-07-25-LeetCode-53-Maximum Subarray/"/>
+
+
+
+
+
+  <title>LeetCode-53 Maximum Subarray | 朝辞</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">朝辞</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Have a nice day!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/2020-07-25-LeetCode-53-Maximum%20Subarray/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhaoci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朝辞">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LeetCode-53 Maximum Subarray</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-25T12:26:00+08:00">
+                2020-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.4k word
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 示例: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 输入: [-2,1,-3,4,-1,2,1,-5,4],</span></span><br><span class="line"><span class="comment">//输出: 6</span></span><br><span class="line"><span class="comment">//解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 进阶: </span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。 </span></span><br><span class="line"><span class="comment">// Related Topics 数组 分治算法 动态规划 </span></span><br><span class="line"><span class="comment">// 👍 2218 👎 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> leetcode.editor.cn;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">P53MaximumSubarray</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Solution solution = <span class="keyword">new</span> P53MaximumSubarray().<span class="keyword">new</span> Solution();</span><br><span class="line">        System.out.println(solution.maxSubArray(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">4</span>,-<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125;));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//leetcode submit region begin(Prohibit modification and deletion)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Solution 2:分治算法.</span></span><br><span class="line"><span class="comment">     * T: O(n) 假设我们将递归的过程看作是一颗二叉树的先序遍历，那么这颗二叉树的深度的渐进上界为O(logn)，</span></span><br><span class="line"><span class="comment">     * 这里的总时间相当于遍历这颗二叉树的所有节点，故总时间的渐进上界是O(∑(i=1,logn) 2^(i-1)) = O(n)</span></span><br><span class="line"><span class="comment">     * S: O(logn)，递归会使用O(logn)的栈空间，因此渐进空间复杂度为O(logn).</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 定义一个操作get(a,l,r)表示查询a序列[l,r]区间内的最大子段和，那么最终我们要求的答案就是</span></span><br><span class="line"><span class="comment">     * get(nums,0,nums.size()-1)。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * &#123;如何分治实现该操作？&#125;</span></span><br><span class="line"><span class="comment">     * 对于一个区间[l,r], 我们取m=[(l+r)/2],对区间[l,m]和[m+1,r]分治求解。当递归逐层深入直到区间长度</span></span><br><span class="line"><span class="comment">     * 缩小为1的时候，递归"开始回升"。这个时候考虑如何通过[l,m]区间的信息和[m+1,r]区间的信息合并成区间</span></span><br><span class="line"><span class="comment">     * [l,r]的信息。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 对于一个区间[l,r]，维护四个量：</span></span><br><span class="line"><span class="comment">     * lSum表示[l,r]内以l为左端点的最大子段和,</span></span><br><span class="line"><span class="comment">     * rSum表示[l,r]内以r为右端点的最大子段和,</span></span><br><span class="line"><span class="comment">     * mSum表示[l,r]内的最大子段和,</span></span><br><span class="line"><span class="comment">     * iSum表示[l,r]的区间和</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 对于长度为1的区间[i,i],四个量的值都和ai相等。对于长度大于1的区间：</span></span><br><span class="line"><span class="comment">     * - 首先最好维护的是iSum, 区间[l,r]的iSum就等于[l,m]的iSum加上[m+1,r]的iSum;</span></span><br><span class="line"><span class="comment">     * - 对于[l,r]的lSum，存在两种可能，其要么等于[l,m]的lSum, 要么等于[l,m]的iSum加上[m+1,r]的lSum，两者取较大;</span></span><br><span class="line"><span class="comment">     * - 对于[l,r]的rSum，存在两种可能，其要么等于[m+1,r]的rSum, 要么等于[l,m]的rSum加上[m+1,r]的iSum，两者取较大;</span></span><br><span class="line"><span class="comment">     * - 计算好上面三个量之后，就很好计算[l,r]的mSum了。可以考虑[l,r]的mSum对应的区间是否跨越m：</span></span><br><span class="line"><span class="comment">     *   + 它不可能跨越m，也就是说[l,r]的mSum可能是[l,m]的mSum和[m+1,r]的mSum中的一个；</span></span><br><span class="line"><span class="comment">     *   + 它也可能跨越m，可能是[l,r]的mSum可能是[l,m]的rSum和[m+1,r]的lSum求和。</span></span><br><span class="line"><span class="comment">     *   + 三者取大</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 尽管Solution2分治算法相较于Solution1动态规划而言，时间复杂度相同，而且因为使用了递归，并且维护了四个信息的结构体，</span></span><br><span class="line"><span class="comment">     * 因此运行的时间略长。空间复杂度也并不比方法1优秀。</span></span><br><span class="line"><span class="comment">     * 但是，Solution2分治算法不仅可以解决区间[0,n-1]的最大子段和问题，还可以用于任意的子区间[l,r]的问题，如果我们将[0,n-1]</span></span><br><span class="line"><span class="comment">     * 分支下去出现的所有子区间的信息都用堆式存储的方式记忆下来，即建成一颗真正的树后，我们就可以在O(logn)的时间内求到任意区间内</span></span><br><span class="line"><span class="comment">     * 的答案。甚至可以修改序列中的值，做一些简单的维护，之后仍然可以在O(logn)的时间内求到任意区间内的答案。对于大规模查询的情况</span></span><br><span class="line"><span class="comment">     * 下，该种方法的优势便可体现。这种树就是一种数据结构——线段树。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums==<span class="keyword">null</span> || nums.length==<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">return</span> maxSub(nums, <span class="number">0</span>, nums.length-<span class="number">1</span>).mSum;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 求区间[left,right]的最大子字段和.</span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> Status <span class="title">maxSub</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(left&lt;right)&#123;</span><br><span class="line">                <span class="comment">// 分</span></span><br><span class="line">                <span class="keyword">int</span> mid = (left+right) &gt;&gt; <span class="number">1</span>; <span class="comment">// 相当于(left+right)/2</span></span><br><span class="line">                Status l = maxSub(nums,left,mid);</span><br><span class="line">                Status r = maxSub(nums,mid+<span class="number">1</span>,right);</span><br><span class="line">                <span class="comment">// 治</span></span><br><span class="line">                <span class="keyword">return</span> pushUp(l,r);</span><br><span class="line">            &#125;<span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Status(nums[left],nums[left],nums[left],nums[left]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> Status <span class="title">pushUp</span><span class="params">(Status l, Status r)</span></span>&#123;</span><br><span class="line">            <span class="keyword">int</span> iSum = l.iSum + r.iSum;</span><br><span class="line">            <span class="keyword">int</span> lSum = Math.max(l.lSum, l.iSum+r.lSum);</span><br><span class="line">            <span class="keyword">int</span> rSum = Math.max(r.rSum, r.iSum+l.rSum);</span><br><span class="line">            <span class="keyword">int</span> mSum = Math.max(Math.max(l.mSum, r.mSum), l.rSum+r.lSum);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Status(lSum, rSum, mSum, iSum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Status</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lSum, rSum, mSum, iSum;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Status</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Status</span><span class="params">(<span class="keyword">int</span> lSum, <span class="keyword">int</span> rSum, <span class="keyword">int</span> mSum, <span class="keyword">int</span> iSum)</span></span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.lSum = lSum;</span><br><span class="line">            <span class="keyword">this</span>.rSum = rSum;</span><br><span class="line">            <span class="keyword">this</span>.mSum = mSum;</span><br><span class="line">            <span class="keyword">this</span>.iSum = iSum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//leetcode submit region end(Prohibit modification and deletion)</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Solution1: 动态规划</span></span><br><span class="line"><span class="comment"> * T: O(n)   S:O(1)</span></span><br><span class="line"><span class="comment"> * 1. 首先对数组进行遍历，当前最大连续子序列和为sum，结果为ans.</span></span><br><span class="line"><span class="comment"> *    - 如果sum&gt;0, 则说明sum对结果有增益效果，则sum保留并加上当前遍历数字.</span></span><br><span class="line"><span class="comment"> *    - 如果sum&lt;=0, 则说明sum对结果无增益效果，需要舍弃，则sum直接更新为当前遍历数字.</span></span><br><span class="line"><span class="comment"> * 2. 每次比较sum和ans的大小，将最大值置为ans，遍历结束返回结果。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">class Solution &#123;</span></span><br><span class="line"><span class="comment">    public int maxSubArray(int[] nums) &#123;</span></span><br><span class="line"><span class="comment">        int ans = nums[0];</span></span><br><span class="line"><span class="comment">        int sum = 0;</span></span><br><span class="line"><span class="comment">        for(int num:nums)&#123;</span></span><br><span class="line"><span class="comment">            if(sum&gt;0)</span></span><br><span class="line"><span class="comment">                sum+=num;</span></span><br><span class="line"><span class="comment">            else</span></span><br><span class="line"><span class="comment">                sum=num;</span></span><br><span class="line"><span class="comment">            ans = Math.max(ans, sum);</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        return ans;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:left;font-size:14px;">
+<p style="text-align:center;color: #ccc;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</p>
+        </div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton"  disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="Zhaoci WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+          
+            <a href="/tags/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/" rel="tag"># 分治算法</a>
+          
+            <a href="/tags/Easy/" rel="tag"># Easy</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/24/2020-07-24-LeetCode-45-Jump%20Gameli/" rel="next" title="LeetCode-45 Jump Gameli">
+                <i class="fa fa-chevron-left"></i> LeetCode-45 Jump Gameli
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zhaoci</p>
+              <p class="site-description motion-element" itemprop="description">朝辞のBlog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaoci</span>
+
+  
+  <a href="http://www.beian.miit.gov.cn" target="_blank" rel="noopener">豫ICP备19028733号</a>
+</div>
+
+<!--注释掉hexo强力驱动-->
+<!--
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":200,"height":350,"hOffset":200,"vOffset":-100},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
