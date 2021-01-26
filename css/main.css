@@ -185,7 +185,7 @@ th {
 }
 body {
   position: relative;
-  font-family: Monaco, huawen-kaiti, "Microsoft YaHei", Verdana, sans-serif;
+  font-family: mononoki, huawen-kaiti, "Microsoft YaHei", Verdana, sans-serif;
   font-size: 16px;
   line-height: 2;
   color: #555;
@@ -1219,7 +1219,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'mononoki, huawen-kaiti', mononoki, huawen-kaiti, "Microsoft YaHei", sans-serif;
+  font-family: 'mononoki', mononoki, huawen-kaiti, "Microsoft YaHei", sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1497,7 +1497,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'mononoki, huawen-kaiti', mononoki, huawen-kaiti, "Microsoft YaHei", sans-serif;
+  font-family: 'mononoki', mononoki, huawen-kaiti, "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1942,7 +1942,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0849db;
+  background: #3e5ca4;
 }
 .links-of-blogroll {
   font-size: 13px;
