@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-26T02:53:37.930Z</updated>
+  <updated>2021-01-27T08:38:13.505Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SPC(Single-pass Clsutering)</title>
+    <link href="http://yoursite.com/2021/01/26/20210126-SPC(Single-pass-Clsutering)/"/>
+    <id>http://yoursite.com/2021/01/26/20210126-SPC(Single-pass-Clsutering)/</id>
+    <published>2021-01-26T06:50:00.000Z</published>
+    <updated>2021-01-27T08:38:13.505Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Single-pass-Clustering"><a href="#Single-pass-Clustering" class="headerlink" title="Single-pass Clustering"></a>Single-pass Clustering</h2><p>在文本主题聚类中，single-pass clustering(单遍聚类)算法通常比K-means更为有效。每个文档只需要流过算法一次，其不需要指定类目数量，可以通过设定相似度阈值来限定聚类数量。</p><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><p>Single-pass算法顺序地处理文本</p><ol><li><strong>以第一篇文档为种子，建立一个新主题</strong>。</li><li>计算新进入文档与已有主题的<strong>相似度</strong>：<ul><li>如果与已有主题相似度大于阈值，将该文档加入到与它<strong>相似度最大</strong>的且<strong>大于一定阈值</strong>的主题中；</li><li>如果与所有已有主题相似度都小于阈值，则以该文档为聚类种子，建立新的主题类别；</li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Single-pass-Clustering&quot;&gt;&lt;a href=&quot;#Single-pass-Clustering&quot; class=&quot;headerlink&quot; title=&quot;Single-pass Clustering&quot;&gt;&lt;/a&gt;Single-pass Clusteri
+      
+    
+    </summary>
+    
+    
+      <category term="Cluster" scheme="http://yoursite.com/categories/Cluster/"/>
+    
+    
+      <category term="Cluster" scheme="http://yoursite.com/tags/Cluster/"/>
+    
+  </entry>
   
   <entry>
     <title>序列标注任务的准确率和召回率</title>
