@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-27T08:38:13.505Z</updated>
+  <updated>2021-01-28T06:58:25.117Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务器conda创建指定路径虚拟环境时，不显示名称无法找到</title>
+    <link href="http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/"/>
+    <id>http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/</id>
+    <published>2021-01-28T06:47:00.000Z</published>
+    <updated>2021-01-28T06:58:25.117Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="指定路径conda虚拟环境"><a href="#指定路径conda虚拟环境" class="headerlink" title="指定路径conda虚拟环境"></a>指定路径conda虚拟环境</h2><p>创建</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --prefix=/root/python36/venv-name python=<span class="number">3.6</span><span class="number">.8</span></span><br></pre></td></tr></table></figure><p>删除</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -p /root/python36/venv-name --all</span><br></pre></td></tr></table></figure><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建的conda环境不显示名称，且找不到也无法激活(activate).</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg" style="zoom:67%;" /><p><code>conda activate lisaipeng</code>会提示无法找到该环境。</p><h2 id="解决途径"><a href="#解决途径" class="headerlink" title="解决途径"></a>解决途径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add pkgs_dirs /devdata/saipeng.li/pkgs</span><br><span class="line">conda config --add envs_dirs /devdata/saipeng.li/envs</span><br></pre></td></tr></table></figure><p>查看conda info</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f1ceo3aj30j404ijrt.jpg" style="zoom:67%;" /><p>查看conda env list</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f24fxawj30no05ogm1.jpg" style="zoom:67%;" /><p>get it.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;指定路径conda虚拟环境&quot;&gt;&lt;a href=&quot;#指定路径conda虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;指定路径conda虚拟环境&quot;&gt;&lt;/a&gt;指定路径conda虚拟环境&lt;/h2&gt;&lt;p&gt;创建&lt;/p&gt;
+&lt;figure class=&quot;high
+      
+    
+    </summary>
+    
+    
+      <category term="tips" scheme="http://yoursite.com/categories/tips/"/>
+    
+    
+      <category term="tips" scheme="http://yoursite.com/tags/tips/"/>
+    
+  </entry>
   
   <entry>
     <title>SPC(Single-pass Clsutering)</title>
