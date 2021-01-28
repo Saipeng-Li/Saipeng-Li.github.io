@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-28T06:58:25.117Z</updated>
+  <updated>2021-01-28T09:04:39.870Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Error:Could not install packages due to an EnvironmentError-Errno 28 No space left on device</title>
+    <link href="http://yoursite.com/2021/01/28/20210128-ErrorCould-not-install-packages-due-to-an-EnvironmentError-Errno-28-No-space-left-on-device/"/>
+    <id>http://yoursite.com/2021/01/28/20210128-ErrorCould-not-install-packages-due-to-an-EnvironmentError-Errno-28-No-space-left-on-device/</id>
+    <published>2021-01-28T08:11:00.000Z</published>
+    <updated>2021-01-28T09:04:39.870Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Error-Info"><a href="#Error-Info" class="headerlink" title="Error Info"></a>Error Info</h2><p>pip install的时候报错：</p><p><strong>Error</strong>: Could not install packages due to an EnvironmentError: [Errno 28] No space left on device</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>查看磁盘空间</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3hbhaalfj30ui094myo.jpg" alt=""></p><p>看到挂载点/devdata还有1.4T空间，不是磁盘空间不够。</p><p>可能由于缓存空间不够了，即设备分配给/tmp的磁盘空间不够了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(lisaipeng) xddz@xddz:&#x2F;devdata$ cd &#x2F;tmp</span><br><span class="line">(lisaipeng) xddz@xddz:&#x2F;tmp$ ls</span><br><span class="line">(lisaipeng) xddz@xddz:&#x2F;tmp$ rm -rf *</span><br></pre></td></tr></table></figure><p>清空/tmp空间后(挂载点/空间清理出174M)，pip install仍报错设备空间不够。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3hlz4ejsj30mq08ut9u.jpg" style="zoom:67%;" /><p>猜测，尽管将pip install安装包路径指定到/devdata中，但是仍需要/挂载点的空间用作安装包缓存。因此仍然需要清理/挂载点空间。</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>使用如下命令，查看设备空间使用情况(各一级文件夹占用)。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(base) xddz@xddz:~$ du -h --max-depth&#x3D;1</span><br></pre></td></tr></table></figure><p>将大文件夹移动到/devdata挂载点。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(base) xddz@xddz:/devdata$ mv -r /home/xddz/Downloads /devdata/Downloads</span><br></pre></td></tr></table></figure><p>清理出9G空间。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3hsdp621j30n009275k.jpg" style="zoom:67%;" /><p>再次pip install, 可以正常安装包了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Error-Info&quot;&gt;&lt;a href=&quot;#Error-Info&quot; class=&quot;headerlink&quot; title=&quot;Error Info&quot;&gt;&lt;/a&gt;Error Info&lt;/h2&gt;&lt;p&gt;pip install的时候报错：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Error
+      
+    
+    </summary>
+    
+    
+      <category term="tip" scheme="http://yoursite.com/categories/tip/"/>
+    
+    
+      <category term="tip" scheme="http://yoursite.com/tags/tip/"/>
+    
+  </entry>
+  
+  <entry>
     <title>服务器conda创建指定路径虚拟环境时，不显示名称无法找到</title>
     <link href="http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/"/>
     <id>http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/</id>
     <published>2021-01-28T06:47:00.000Z</published>
-    <updated>2021-01-28T06:58:25.117Z</updated>
+    <updated>2021-01-28T08:10:44.680Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="指定路径conda虚拟环境"><a href="#指定路径conda虚拟环境" class="headerlink" title="指定路径conda虚拟环境"></a>指定路径conda虚拟环境</h2><p>创建</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --prefix=/root/python36/venv-name python=<span class="number">3.6</span><span class="number">.8</span></span><br></pre></td></tr></table></figure><p>删除</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -p /root/python36/venv-name --all</span><br></pre></td></tr></table></figure><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建的conda环境不显示名称，且找不到也无法激活(activate).</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg" style="zoom:67%;" /><p><code>conda activate lisaipeng</code>会提示无法找到该环境。</p><h2 id="解决途径"><a href="#解决途径" class="headerlink" title="解决途径"></a>解决途径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add pkgs_dirs /devdata/saipeng.li/pkgs</span><br><span class="line">conda config --add envs_dirs /devdata/saipeng.li/envs</span><br></pre></td></tr></table></figure><p>查看conda info</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f1ceo3aj30j404ijrt.jpg" style="zoom:67%;" /><p>查看conda env list</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f24fxawj30no05ogm1.jpg" style="zoom:67%;" /><p>get it.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="指定路径conda虚拟环境"><a href="#指定路径conda虚拟环境" class="headerlink" title="指定路径conda虚拟环境"></a>指定路径conda虚拟环境</h2><p>创建</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --prefix=/root/python36/venv-name python=<span class="number">3.6</span><span class="number">.8</span></span><br></pre></td></tr></table></figure><p>删除</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -p /root/python36/venv-name --all</span><br></pre></td></tr></table></figure><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建的conda环境不显示名称，且找不到也无法激活(activate).</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg" style="zoom:67%;" /><p><code>conda activate lisaipeng</code>会提示无法找到该环境。</p><h2 id="解决途径"><a href="#解决途径" class="headerlink" title="解决途径"></a>解决途径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add pkgs_dirs /devdata/saipeng.li/pkgs</span><br><span class="line">conda config --add envs_dirs /devdata/saipeng.li/envs</span><br></pre></td></tr></table></figure><p>查看conda info</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f1ceo3aj30j404ijrt.jpg" style="zoom:67%;" /><p>查看conda env list</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f24fxawj30no05ogm1.jpg" style="zoom:67%;" /><p>get it.</p><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>所创建的conda虚拟环境的pip install会将包安装在全局pip路径下，应该在虚拟环境中安装pip，将其安装到自己的虚拟环境目录中.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pip</span><br></pre></td></tr></table></figure><p>~/.bashrc中添加：</p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gk43rblj30mw0140ta.jpg" alt="image-20210128154953128" style="zoom:50%;" /><p>(lisaipeng) xddz@xddz:/devdata/saipeng.li/envs/lisaipeng/lib/python3.6$ vi site.py</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gw3unh0j30v001ywg5.jpg" alt=""></p><p>查看python site-info.</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gxx73hhj310209udn1.jpg" alt="image-20210128160309113"></p>]]></content>
     
     <summary type="html">
     
