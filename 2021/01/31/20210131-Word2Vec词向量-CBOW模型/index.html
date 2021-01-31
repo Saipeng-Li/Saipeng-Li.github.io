@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="tips," />
+  <meta name="keywords" content="NLP,embedding," />
 
 
 
@@ -83,25 +83,28 @@
 
 
 
-<meta name="description" content="指定路径conda虚拟环境创建 1conda create --prefix&#x3D;&#x2F;root&#x2F;python36&#x2F;venv-name python&#x3D;3.6.8  删除 1conda remove -p &#x2F;root&#x2F;python36&#x2F;venv-name --all    问题创建的conda环境不显示名称，且找不到也无法激活(activate).   conda activate lisaipeng会提示">
+<meta name="description" content="转载:[https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;44832436&#x2F;answer&#x2F;266068967] Word2Vec得到词向量文本语料库进行预处理，得到processed corpus，将它们的one-hot向量作为Word2Vec的输入，通过Word2Vec训练低维词向量(word embedding). Word2Vec主要有两种训练模型CBOW和Skip-gram.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务器conda创建指定路径虚拟环境时，不显示名称无法找到">
-<meta property="og:url" content="http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/index.html">
+<meta property="og:title" content="Word2Vec词向量-CBOW模型">
+<meta property="og:url" content="http://yoursite.com/2021/01/31/20210131-Word2Vec%E8%AF%8D%E5%90%91%E9%87%8F-CBOW%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="指定路径conda虚拟环境创建 1conda create --prefix&#x3D;&#x2F;root&#x2F;python36&#x2F;venv-name python&#x3D;3.6.8  删除 1conda remove -p &#x2F;root&#x2F;python36&#x2F;venv-name --all    问题创建的conda环境不显示名称，且找不到也无法激活(activate).   conda activate lisaipeng会提示">
+<meta property="og:description" content="转载:[https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;44832436&#x2F;answer&#x2F;266068967] Word2Vec得到词向量文本语料库进行预处理，得到processed corpus，将它们的one-hot向量作为Word2Vec的输入，通过Word2Vec训练低维词向量(word embedding). Word2Vec主要有两种训练模型CBOW和Skip-gram.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f1ceo3aj30j404ijrt.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f24fxawj30no05ogm1.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gk43rblj30mw0140ta.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gw3unh0j30v001ywg5.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gxx73hhj310209udn1.jpg">
-<meta property="article:published_time" content="2021-01-28T06:47:00.000Z">
-<meta property="article:modified_time" content="2021-01-28T08:10:44.680Z">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-2a319bac1bb7fcae2f4395d2c38674ea_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-0f439e1bb44c71c8e694cc65cb509263_1440w.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-3e75211b3b675f17a232f29fae0982bc_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-abd3c7d6bc76c01266e8ddd32acfe31a_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-66655880a87789eaba5dd6f5c5033e94_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-5325f4a5d1fbacefd93ccb138b706a69_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-1713450fa2a0f37c8cbcce4ffef04baa_r.jpg?source=1940ef5c">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-a54db7c984e6eaf9f06cf21178238fc6_r.jpg?source=1940ef5c">
+<meta property="article:published_time" content="2021-01-31T11:42:00.000Z">
+<meta property="article:modified_time" content="2021-01-31T12:18:14.175Z">
 <meta property="article:author" content="Ci">
-<meta property="article:tag" content="tips">
+<meta property="article:tag" content="NLP">
+<meta property="article:tag" content="embedding">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg">
+<meta name="twitter:image" content="https://pic2.zhimg.com/v2-2a319bac1bb7fcae2f4395d2c38674ea_r.jpg?source=1940ef5c">
 
 
 
@@ -131,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/01/28/20210128-服务器conda创建指定路径虚拟环境时，不显示名称无法找到/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/01/31/20210131-Word2Vec词向量-CBOW模型/"/>
 
 
 
 
 
-  <title>服务器conda创建指定路径虚拟环境时，不显示名称无法找到 | 辞</title>
+  <title>Word2Vec词向量-CBOW模型 | 辞</title>
   
 
 
@@ -272,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/28/20210128-%E6%9C%8D%E5%8A%A1%E5%99%A8conda%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%B6%EF%BC%8C%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%90%8D%E7%A7%B0%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/31/20210131-Word2Vec%E8%AF%8D%E5%90%91%E9%87%8F-CBOW%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ci">
@@ -289,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">服务器conda创建指定路径虚拟环境时，不显示名称无法找到</h1>
+          <h1 class="post-title" itemprop="name headline">Word2Vec词向量-CBOW模型</h1>
         
 
         <div class="post-meta">
@@ -301,8 +304,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-28T14:47:00+08:00">
-                2021-01-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-31T19:42:00+08:00">
+                2021-01-31
               </time>
             
 
@@ -324,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tips/" itemprop="url" rel="index">
-                    <span itemprop="name">tips</span>
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
                   </a>
                 </span>
 
@@ -355,7 +358,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  174 word
+                  475 word
                 </span>
               
 
@@ -392,37 +395,36 @@
       
 
       
-        <h2 id="指定路径conda虚拟环境"><a href="#指定路径conda虚拟环境" class="headerlink" title="指定路径conda虚拟环境"></a>指定路径conda虚拟环境</h2><p>创建</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --prefix=/root/python36/venv-name python=<span class="number">3.6</span><span class="number">.8</span></span><br></pre></td></tr></table></figure>
+        <p>转载:[<a href="https://www.zhihu.com/question/44832436/answer/266068967]" target="_blank" rel="noopener">https://www.zhihu.com/question/44832436/answer/266068967]</a></p>
+<h2 id="Word2Vec得到词向量"><a href="#Word2Vec得到词向量" class="headerlink" title="Word2Vec得到词向量"></a>Word2Vec得到词向量</h2><p>文本语料库进行预处理，得到processed corpus，将它们的one-hot向量作为Word2Vec的输入，通过Word2Vec训练低维词向量(word embedding).</p>
+<p>Word2Vec主要有两种训练模型CBOW和Skip-gram. 两种加速算法Negative Sample和Hierarchical Softmax.</p>
+<h2 id="One-hot-Vector-gt-Word2Vec-gt-低维词向量"><a href="#One-hot-Vector-gt-Word2Vec-gt-低维词向量" class="headerlink" title="One-hot Vector -&gt; (Word2Vec) -&gt; 低维词向量"></a>One-hot Vector -&gt; (Word2Vec) -&gt; 低维词向量</h2><p>CBOW: 由中心词周围的词来预测中心词.</p>
+<p>Skip-gram: 由中心词来预测周围的词.</p>
+<h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><img src="https://pic2.zhimg.com/v2-2a319bac1bb7fcae2f4395d2c38674ea_r.jpg?source=1940ef5c" style="zoom:48%;" />
 
-<p>删除</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -p /root/python36/venv-name --all</span><br></pre></td></tr></table></figure>
+<img src="https://pic2.zhimg.com/80/v2-0f439e1bb44c71c8e694cc65cb509263_1440w.jpg?source=1940ef5c" style="zoom:50%;" />
+
+<ol>
+<li>输入层：为上下文单词的one-hot vector.「假设单词向量空间维度dim为V，上下文单词数为C」</li>
+<li>所有one-hot向量分别乘以共享的权重矩阵W. 「V*N矩阵，N为自己设定的数，初始化权重矩阵W」</li>
+<li>所得的向量相加求平均作为隐藏层向量，size为1*N</li>
+<li>乘以输出权重矩阵W’ 「W’为N*V维矩阵」</li>
+<li>得到向量「1*V」激活函数处理得到V-dim概率分布，概率最大的index所指示的单词为预测出的中间词(target word)</li>
+<li>与true label的one-hot相比较，误差越小越好</li>
+</ol>
+<p>因此，需要定义loss function(一般为交叉熵代价函数)，采用梯度下降算法更新W和W’。</p>
+<p>训练完毕后，输入层的每个单词与矩阵W(look up table)相乘得到的向量就是所要的词向量(word embedding)。即任何一个单词的one-hot乘以这个矩阵都将得到自己的词向量。</p>
+<p>有了look up table就可以免去训练过程直接查表得到单词的词向量了。</p>
+<h4 id="Example-of-CBOW-Model"><a href="#Example-of-CBOW-Model" class="headerlink" title="Example of CBOW Model"></a>Example of CBOW Model</h4><p><img src="https://pic3.zhimg.com/v2-3e75211b3b675f17a232f29fae0982bc_r.jpg?source=1940ef5c" alt=""></p>
+<p><img src="https://pic1.zhimg.com/v2-abd3c7d6bc76c01266e8ddd32acfe31a_r.jpg?source=1940ef5c" alt=""></p>
+<p><img src="https://pic2.zhimg.com/v2-66655880a87789eaba5dd6f5c5033e94_r.jpg?source=1940ef5c" alt=""></p>
+<p><img src="https://pic1.zhimg.com/v2-5325f4a5d1fbacefd93ccb138b706a69_r.jpg?source=1940ef5c" alt=""></p>
+<p><img src="https://pic4.zhimg.com/v2-1713450fa2a0f37c8cbcce4ffef04baa_r.jpg?source=1940ef5c" alt=""></p>
+<p>假设我们此时得到的概率分布已经达到了设定的迭代次数，那么现在我们训练出来的look up table应该为矩阵W。即，<strong>任何一个单词的one-hot表示乘以这个矩阵都将得到自己的word embedding。</strong></p>
+<h3 id="Skip-gram"><a href="#Skip-gram" class="headerlink" title="Skip-gram"></a>Skip-gram</h3><img src="https://pic3.zhimg.com/v2-a54db7c984e6eaf9f06cf21178238fc6_r.jpg?source=1940ef5c" style="zoom:48%;" /> 
 
 
 
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建的conda环境不显示名称，且找不到也无法激活(activate).</p>
-<img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3eu5m15fj30nm06mdgl.jpg" style="zoom:67%;" />
-
-<p><code>conda activate lisaipeng</code>会提示无法找到该环境。</p>
-<h2 id="解决途径"><a href="#解决途径" class="headerlink" title="解决途径"></a>解决途径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add pkgs_dirs /devdata/saipeng.li/pkgs</span><br><span class="line">conda config --add envs_dirs /devdata/saipeng.li/envs</span><br></pre></td></tr></table></figure>
-
-<p>查看conda info</p>
-<img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f1ceo3aj30j404ijrt.jpg" style="zoom:67%;" />
-
-<p>查看conda env list</p>
-<img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3f24fxawj30no05ogm1.jpg" style="zoom:67%;" />
-
-<p>get it.</p>
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>所创建的conda虚拟环境的pip install会将包安装在全局pip路径下，应该在虚拟环境中安装pip，将其安装到自己的虚拟环境目录中.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pip</span><br></pre></td></tr></table></figure>
-
-<p>~/.bashrc中添加：</p>
-<img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gk43rblj30mw0140ta.jpg" alt="image-20210128154953128" style="zoom:50%;" />
-
-<p>(lisaipeng) xddz@xddz:/devdata/saipeng.li/envs/lisaipeng/lib/python3.6$ vi site.py</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gw3unh0j30v001ywg5.jpg" alt=""></p>
-<p>查看python site-info.</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gn3gxx73hhj310209udn1.jpg" alt="image-20210128160309113"></p>
 
       
     </div>
@@ -481,7 +483,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tips/" rel="tag"># tips</a>
+            <a href="/tags/NLP/" rel="tag"># NLP</a>
+          
+            <a href="/tags/embedding/" rel="tag"># embedding</a>
           
         </div>
       
@@ -494,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/01/26/20210126-SPC(Single-pass-Clsutering)/" rel="next" title="SPC(Single-pass Clsutering)">
-                <i class="fa fa-chevron-left"></i> SPC(Single-pass Clsutering)
+              <a href="/2021/01/31/20210131-Survey-Paper-on-Sentiment-Analysis---Techniques-and-Challenges/" rel="next" title="Survey Paper on Sentiment Analysis - Techniques and Challenges">
+                <i class="fa fa-chevron-left"></i> Survey Paper on Sentiment Analysis - Techniques and Challenges
               </a>
             
           </div>
@@ -503,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/01/28/20210128-ErrorCould-not-install-packages-due-to-an-EnvironmentError-Errno-28-No-space-left-on-device/" rel="prev" title="Error:Could not install packages due to an EnvironmentError-Errno 28 No space left on device">
-                Error:Could not install packages due to an EnvironmentError-Errno 28 No space left on device <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -645,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#指定路径conda虚拟环境"><span class="nav-number">1.</span> <span class="nav-text">指定路径conda虚拟环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决途径"><span class="nav-number">3.</span> <span class="nav-text">解决途径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Word2Vec得到词向量"><span class="nav-number">1.</span> <span class="nav-text">Word2Vec得到词向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-hot-Vector-gt-Word2Vec-gt-低维词向量"><span class="nav-number">2.</span> <span class="nav-text">One-hot Vector -&gt; (Word2Vec) -&gt; 低维词向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CBOW"><span class="nav-number">2.1.</span> <span class="nav-text">CBOW</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-of-CBOW-Model"><span class="nav-number">2.1.1.</span> <span class="nav-text">Example of CBOW Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Skip-gram"><span class="nav-number">2.2.</span> <span class="nav-text">Skip-gram</span></a></li></ol></li></ol></div>
             
 
           </div>

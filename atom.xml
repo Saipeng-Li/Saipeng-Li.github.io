@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-31T03:58:04.312Z</updated>
+  <updated>2021-01-31T12:18:14.175Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word2Vec词向量-CBOW模型</title>
+    <link href="http://yoursite.com/2021/01/31/20210131-Word2Vec%E8%AF%8D%E5%90%91%E9%87%8F-CBOW%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://yoursite.com/2021/01/31/20210131-Word2Vec%E8%AF%8D%E5%90%91%E9%87%8F-CBOW%E6%A8%A1%E5%9E%8B/</id>
+    <published>2021-01-31T11:42:00.000Z</published>
+    <updated>2021-01-31T12:18:14.175Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载:[<a href="https://www.zhihu.com/question/44832436/answer/266068967]" target="_blank" rel="noopener">https://www.zhihu.com/question/44832436/answer/266068967]</a></p><h2 id="Word2Vec得到词向量"><a href="#Word2Vec得到词向量" class="headerlink" title="Word2Vec得到词向量"></a>Word2Vec得到词向量</h2><p>文本语料库进行预处理，得到processed corpus，将它们的one-hot向量作为Word2Vec的输入，通过Word2Vec训练低维词向量(word embedding).</p><p>Word2Vec主要有两种训练模型CBOW和Skip-gram. 两种加速算法Negative Sample和Hierarchical Softmax.</p><h2 id="One-hot-Vector-gt-Word2Vec-gt-低维词向量"><a href="#One-hot-Vector-gt-Word2Vec-gt-低维词向量" class="headerlink" title="One-hot Vector -&gt; (Word2Vec) -&gt; 低维词向量"></a>One-hot Vector -&gt; (Word2Vec) -&gt; 低维词向量</h2><p>CBOW: 由中心词周围的词来预测中心词.</p><p>Skip-gram: 由中心词来预测周围的词.</p><h3 id="CBOW"><a href="#CBOW" class="headerlink" title="CBOW"></a>CBOW</h3><img src="https://pic2.zhimg.com/v2-2a319bac1bb7fcae2f4395d2c38674ea_r.jpg?source=1940ef5c" style="zoom:48%;" /><img src="https://pic2.zhimg.com/80/v2-0f439e1bb44c71c8e694cc65cb509263_1440w.jpg?source=1940ef5c" style="zoom:50%;" /><ol><li>输入层：为上下文单词的one-hot vector.「假设单词向量空间维度dim为V，上下文单词数为C」</li><li>所有one-hot向量分别乘以共享的权重矩阵W. 「V*N矩阵，N为自己设定的数，初始化权重矩阵W」</li><li>所得的向量相加求平均作为隐藏层向量，size为1*N</li><li>乘以输出权重矩阵W’ 「W’为N*V维矩阵」</li><li>得到向量「1*V」激活函数处理得到V-dim概率分布，概率最大的index所指示的单词为预测出的中间词(target word)</li><li>与true label的one-hot相比较，误差越小越好</li></ol><p>因此，需要定义loss function(一般为交叉熵代价函数)，采用梯度下降算法更新W和W’。</p><p>训练完毕后，输入层的每个单词与矩阵W(look up table)相乘得到的向量就是所要的词向量(word embedding)。即任何一个单词的one-hot乘以这个矩阵都将得到自己的词向量。</p><p>有了look up table就可以免去训练过程直接查表得到单词的词向量了。</p><h4 id="Example-of-CBOW-Model"><a href="#Example-of-CBOW-Model" class="headerlink" title="Example of CBOW Model"></a>Example of CBOW Model</h4><p><img src="https://pic3.zhimg.com/v2-3e75211b3b675f17a232f29fae0982bc_r.jpg?source=1940ef5c" alt=""></p><p><img src="https://pic1.zhimg.com/v2-abd3c7d6bc76c01266e8ddd32acfe31a_r.jpg?source=1940ef5c" alt=""></p><p><img src="https://pic2.zhimg.com/v2-66655880a87789eaba5dd6f5c5033e94_r.jpg?source=1940ef5c" alt=""></p><p><img src="https://pic1.zhimg.com/v2-5325f4a5d1fbacefd93ccb138b706a69_r.jpg?source=1940ef5c" alt=""></p><p><img src="https://pic4.zhimg.com/v2-1713450fa2a0f37c8cbcce4ffef04baa_r.jpg?source=1940ef5c" alt=""></p><p>假设我们此时得到的概率分布已经达到了设定的迭代次数，那么现在我们训练出来的look up table应该为矩阵W。即，<strong>任何一个单词的one-hot表示乘以这个矩阵都将得到自己的word embedding。</strong></p><h3 id="Skip-gram"><a href="#Skip-gram" class="headerlink" title="Skip-gram"></a>Skip-gram</h3><img src="https://pic3.zhimg.com/v2-a54db7c984e6eaf9f06cf21178238fc6_r.jpg?source=1940ef5c" style="zoom:48%;" /> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转载:[&lt;a href=&quot;https://www.zhihu.com/question/44832436/answer/266068967]&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.zhihu.com/question/448
+      
+    
+    </summary>
+    
+    
+      <category term="NLP" scheme="http://yoursite.com/categories/NLP/"/>
+    
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+      <category term="embedding" scheme="http://yoursite.com/tags/embedding/"/>
+    
+  </entry>
   
   <entry>
     <title>Survey Paper on Sentiment Analysis - Techniques and Challenges</title>
