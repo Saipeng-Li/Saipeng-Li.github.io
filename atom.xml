@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-31T00:49:10.399Z</updated>
+  <updated>2021-01-31T03:58:04.312Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Survey Paper on Sentiment Analysis - Techniques and Challenges</title>
+    <link href="http://yoursite.com/2021/01/31/20210131-Survey-Paper-on-Sentiment-Analysis---Techniques-and-Challenges/"/>
+    <id>http://yoursite.com/2021/01/31/20210131-Survey-Paper-on-Sentiment-Analysis---Techniques-and-Challenges/</id>
+    <published>2021-01-31T01:36:00.000Z</published>
+    <updated>2021-01-31T03:58:04.312Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, they are going:</p><ul><li>to survey different steps and techniques on sentiment analysis. </li><li>to find out a better way to increase the accuracy and efficiency of a model.</li><li>to discuss various challenges in sentiment analysis.</li></ul><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Reviews helps the potential user to understand the product from inside out.</p><p>Finding the suitable techniques to analyse the reviews is the main objective of this paper.</p><p>Sentiment analysis can be carried out by two approaches i.e. <code>machine learning approach</code> and <code>lexicon based approach</code>. </p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn6n5p4lryj30t60midjx.jpg" style="zoom: 50%;" /><h3 id="Data-Acquisition"><a href="#Data-Acquisition" class="headerlink" title="Data Acquisition"></a>Data Acquisition</h3><p>Use a web scraper <code>beautiful soup</code> to extract the reviews from webpages. </p><h3 id="Data-Preprocessing"><a href="#Data-Preprocessing" class="headerlink" title="Data Preprocessing"></a>Data Preprocessing</h3><p>The extracted reviews of a product are in the form of either <code>sentences</code> or <code>paragraphs</code>.</p><p>Basically data preprocessing include <code>tokenization</code>, <code>stop-words removal</code>, <code>stemming</code>(词干提取) and <code>lemmatization</code>(词元化).</p><h4 id="Tokenization"><a href="#Tokenization" class="headerlink" title="Tokenization"></a>Tokenization</h4><p>Dividing the <code>paragraphs into sentences</code> and <code>sentences into words</code>.</p><p><code>Word tokenizer</code>: tokenize the sentence into words.</p><p><code>sentence tokenizer</code>: tokenize the paragraph into sentences.</p><h4 id="Stop-words-Removal"><a href="#Stop-words-Removal" class="headerlink" title="Stop-words Removal"></a>Stop-words Removal</h4><p><code>Stop-words</code> are words that are not considered or do not contribute in the analysis process. (better to remove rather than storing)</p><h4 id="Stemming-and-Lemmatization"><a href="#Stemming-and-Lemmatization" class="headerlink" title="Stemming and Lemmatization"></a>Stemming and Lemmatization</h4><p><code>Steamming</code> is the process of finding out morphemes(词素) or the root words from the derived words. (not give the actual morphemes but the closest one)</p><ul><li><code>morphemes</code>: In English grammar and morphology, a morpheme is a meaningful linguistic unit consisting of a word such as dog, or a word element, such as the -s at the end of dogs, that can’t be divided into smaller meaningful parts. Morphemes are the smallest units of meaning in a language</li></ul><p><code>Lemmatization</code> gives the actual root word by comparing the stemmed words in its dictionary and gives the closest actual one. </p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn6ourb07pj30ik04gdg0.jpg" style="zoom:67%;" /><h3 id="Analyzed-Output"><a href="#Analyzed-Output" class="headerlink" title="Analyzed Output"></a>Analyzed Output</h3><p>reviews -&gt; (preprocessing step) -&gt; tokens -&gt; (various algorithms) -&gt; output in the form of rating</p><h2 id="Sentiment-Classification-Techniques"><a href="#Sentiment-Classification-Techniques" class="headerlink" title="Sentiment Classification Techniques"></a>Sentiment Classification Techniques</h2><p><code>Lexicon based approach</code>, <code>Machine learning approach</code> and <code>Hybrid approach</code> are the classification of Sentiment Analysis.</p><h3 id="Lexicon-based-approach"><a href="#Lexicon-based-approach" class="headerlink" title="Lexicon based approach"></a>Lexicon based approach</h3><p><code>Lexicon based approach</code> divides the entire document into lexemes(词素) which is used to examine the sentences.</p><p>[<a href="https://zhuanlan.zhihu.com/p/106588589]" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/106588589]</a></p><p>人工构建词典是抓取数据之后多次进行人工标注，根据情感表达将词语进行正负向和强弱程度区分。</p><ul><li><p><code>corpus based approach</code>(基于语料库的方法): It is <code>less efficient</code> than dictionary based approach because <code>making a large corpus for covering English words</code> is a difficult task.</p><p>完备的语义知识库, 能够快速构建通用性较强的情感词典, 对词典的精度要求不高的情况下, 这种方法较为实用。中文语义知识库的不足以及领域的限制使得该方法在构建面向单一领域的情感词典中表现不佳。</p></li><li><p><code>dictionary based approach</code>(基于词典的方法): <code>Better efficency</code>. It uses a dictionary which consists of all the synonyms and antonyms of each words. </p><p>相对于语义知识库而言, 其优点是容易获得且数量充足, 构建的词典在语料所属的领域内表现较好, 但是构建的成本较高, 需要对语料进行预处理, 另外, 所构建的词典的准确率相对不高。</p></li></ul><h3 id="Machine-learning-approach"><a href="#Machine-learning-approach" class="headerlink" title="Machine learning approach"></a>Machine learning approach</h3><p>基于词典的文本情感分析技术由于构建的词典往往<strong>只针对某个领域</strong>，对于跨领域情感分析的效果不够好，而且词典中的情感词可能不够丰富，对于短文本和特定领域文本进行情感分析的效果更好。因此，对于长文本来说，更好的解决方法是利用机器学习方法。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn6q3mhnghj30zg0i4q4c.jpg" style="zoom: 33%;" /><ul><li><p><code>Naive Bayes algorithm</code>: Bayes’ theorem computes the probability of given set using already calculated probabilities.</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn6ps72guij30ke0buaak.jpg" style="zoom: 33%;" /><p>(基于公式可得出x归为情感C的概率).</p></li><li><p><code>Maximum entropy</code>(最大熵): 基于最大熵的文本情感分析只要得到一些训练数据，然后进行迭代，就可以得到所需模型，进行自收敛，方法简单。但是由于最大熵往往只能得到局部最佳解而非全局最优解，因此运用该方法进行情感分析准确率有待提高。且约束函数数量和样本数目有关系，导致迭代过程计算量巨大，实际应用比较难。</p></li><li><p><code>Support Vector Machines</code>: 通过寻求结构化风险最小以提高学习机泛化能力，实现经验风险和置信范围的最小化，从而达到在统计样本量较少的情况下，亦能获得良好统计规律的目的。但该方法对参数调节和核函数的选择敏感。</p></li></ul><h3 id="Deep-learning"><a href="#Deep-learning" class="headerlink" title="Deep learning"></a>Deep learning</h3><p>随着深度学习的快速发展, 词向量模型等的提出恰好为相关研究提供了契机。</p><p>在深度学习中，可以应用于情感分析的技术有很多，比如：</p><ul><li>前馈神经网络(FNN)</li><li>Word2Vec词嵌入技术</li><li>卷积神经网络(CNN)</li><li>循环神经网络(RNN)</li><li>LSTM网络</li></ul><h2 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h2><h3 id="Multiple-Language-Input"><a href="#Multiple-Language-Input" class="headerlink" title="Multiple Language Input"></a>Multiple Language Input</h3><p>The classifier mainly uses <code>English language</code> while the reviews given by users can be in <code>multiple languages</code>. </p><h3 id="Fake-Inputs"><a href="#Fake-Inputs" class="headerlink" title="Fake Inputs"></a>Fake Inputs</h3><p>Fake or bogus reviwes misguide the users or customers about a product by providing <code>fake</code> or <code>irrelevant</code> nagative or positive reviews, to increase or decrease to the popularity of a product. </p><h3 id="Emoticons-and-Sarcastic-Reviews"><a href="#Emoticons-and-Sarcastic-Reviews" class="headerlink" title="Emoticons and Sarcastic Reviews"></a>Emoticons and Sarcastic Reviews</h3><p><code>Emoticons</code>(表情符号) are the pictorial representation of one’s expressions while it becomes difficult for a machine to understand the emoticons. </p><p><code>Sarcastic reviews</code>(讽刺性评论) are difficult to interpret by the machine. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract&quot;&gt;&lt;/a&gt;Abstract&lt;/h2&gt;&lt;p&gt;In this paper, they are going:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/tags/paper/"/>
+    
+      <category term="sentiment analysis" scheme="http://yoursite.com/tags/sentiment-analysis/"/>
+    
+      <category term="survey" scheme="http://yoursite.com/tags/survey/"/>
+    
+  </entry>
   
   <entry>
     <title>pip更换镜像源</title>
