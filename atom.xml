@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-31T12:18:14.175Z</updated>
+  <updated>2021-02-01T09:57:41.955Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Survey of the Applications of Sentiment Analysis</title>
+    <link href="http://yoursite.com/2021/02/01/20210201-A-Survey-of-the-Applications-of-Sentiment-Analysis/"/>
+    <id>http://yoursite.com/2021/02/01/20210201-A-Survey-of-the-Applications-of-Sentiment-Analysis/</id>
+    <published>2021-02-01T09:11:00.000Z</published>
+    <updated>2021-02-01T09:57:41.955Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="A-Survey-of-the-Applications-of-Sentiment-Analysis"><a href="#A-Survey-of-the-Applications-of-Sentiment-Analysis" class="headerlink" title="# A Survey of the Applications of Sentiment Analysis"></a># A Survey of the Applications of Sentiment Analysis</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="## Abstract"></a>## Abstract</h2><p>To help people understand sentiment analysis’s <code>application value</code>,</p><ul><li>survey various applications of sentiment analysis in <code>online business</code> and <code>offline business</code> as well as other types.</li><li>give some examples in intelligent customer service systems in China.</li><li>compare the applications of sentiment analysis on <code>Twitter</code>,<code>Weibo</code>,<code>Taobao</code> and <code>Facebook</code>, and discuss some challenges.</li><li>point out the <code>challenges</code> faced in the applications of sentiment analysis and valuable <code>future works</code>.</li></ul><br/><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="## Introduction"></a>## Introduction</h2><p>Sentiment analysis tasks involve many problems in the field of natural language processing, including <code>named entity recognition</code>(命名实体识别),<code>word polarity disambiguation</code>(词的极性消歧),<code>satire detection</code>(讽刺语检测), and <code>aspect extraction</code>(相位提取).</p><br/><p>In terms of granularity(粒度), We can classify sentiment analysis into:</p><ul><li><code>Fine-grained sentiment analysis</code>(细粒度的情感分析): refer to the sentiment analysis of <strong>phrases</strong> and <strong>words</strong>.</li><li><code>Coarse-grained sentimnet analysis</code>(粗粒度的情感分析): refer to the sentiment analysis of the overall propensity prediction of massive data sets at <strong>sentence level</strong> and <strong>chapter level</strong>.<ul><li>sentence-level</li><li>chapter-level</li><li>multiple-chapter-level</li></ul></li></ul><br/><p><code>explicit emotions</code> and <code>implicit emotions</code> according to whether or not the emotion is determinable. The current research mainly focuses on <strong>diaplaying sentiment analysis</strong>.</p><br/><p>The focus in this paper is not on surveying sentiment analysis methods, but on <strong>various applications of sentiment analysis in various domains</strong>, and particularly we discuss <strong>the challenges faced by sentiment analysis in their applications</strong> and <strong>the future development direction</strong>.<br><br/></p><h2 id="Online-Business"><a href="#Online-Business" class="headerlink" title="## Online Business"></a>## Online Business</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;A-Survey-of-the-Applications-of-Sentiment-Analysis&quot;&gt;&lt;a href=&quot;#A-Survey-of-the-Applications-of-Sentiment-Analysis&quot; class=&quot;headerlink&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/tags/paper/"/>
+    
+      <category term="sentiment analysis" scheme="http://yoursite.com/tags/sentiment-analysis/"/>
+    
+      <category term="survey" scheme="http://yoursite.com/tags/survey/"/>
+    
+  </entry>
   
   <entry>
     <title>Word2Vec词向量-CBOW模型</title>
