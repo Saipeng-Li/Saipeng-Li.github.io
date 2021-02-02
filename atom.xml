@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-01T11:50:55.440Z</updated>
+  <updated>2021-02-02T05:51:52.136Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sentiment Analysis of Comment Texts Based on BiLSTM</title>
+    <link href="http://yoursite.com/2021/02/02/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/"/>
+    <id>http://yoursite.com/2021/02/02/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/</id>
+    <published>2021-02-02T03:57:00.000Z</published>
+    <updated>2021-02-02T05:51:52.136Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM"><a href="#Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM" class="headerlink" title="# Sentiment Analysis of Comment Texts Based on BiLSTM"></a># Sentiment Analysis of Comment Texts Based on BiLSTM</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="## Abstract"></a>## Abstract</h2><p>In the current sentiment analysis studies, <code>distributed word representation</code> is mostly used, which only considers <strong>the semantic information of word</strong>, but ignore <strong>the sentiment information of the word</strong>. </p><p>In this paper, <font color=red>an improved word representation method is proposed,</font> which <strong>integrates <em>the contribution of sentiment information</em> into the <em>traditional TF-IDF algorithm</em> and generates weighted word vectors.</strong> <font color=blue>The weighted word vectors are input into bidirectional long short term memory(BiLSTM) to capture the context information effectively.</font></p><p>The proposed sentiment analysis method is compared with the sentiment analysis methods of RNN, CNN, LSTM and NB.</p><br/><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="## Introduction"></a>## Introduction</h2><p>Text sentiment analysis can be divided into:</p><ul><li><p><strong>According to the object of sentiment analysis</strong></p><ul><li>three levels: <code>words</code>,<code>sentences</code>,<code>chapters</code>.</li></ul></li><li><p><strong>According to the classifictaion method of sentiment orientation</strong></p><ul><li><code>binary sentiment classification</code>,<code>ternary sentiment classification</code> and <code>multi-sentiment classification</code>.</li></ul></li><li><p><strong>According to the text sentiment analysis methods</strong></p><ul><li>sentiment analysis method based on <code>sentiment dictionary</code>,<code>machine learning</code> and <code>deep learning</code>.</li></ul></li></ul><br/><p>Method based on <font color=red>sentiment dictionary</font> uses the dictionary to identify sentiment words in the text and obtain sentiment values. </p><p>Then according to the sentiment calculation rules, the text sentiment tendency is obtained.</p><p><font color=green>Text sentiment analysis based on sentiment dictionary does not require manual labeling of samples and is easy to implement.</font></p><p><font color=orange>The quality of the analysis is highly dependent on the sentiment dictionary. Most of the sentiment dictionaries have problems such as <code>insufficient coverage of sentiment words</code> and <code>lack of domain words</code>.</font></p><br/><p>The earliest research on text sentiment analysis based on <font color=red>machine learning</font> used <code>naive Bayesian algorithm</code>,<code>maximum entropy alogorithm</code> and <code>SVM algorithm</code>. </p><p><strong>Goldberg</strong> - A graph-based semi-supervised classification algorithm.</p><p><strong>Wang</strong> - A high-dimensional mixed feature sentiment analysis model based on SVM.</p><p><font color=orange>Sentiment analysis mthod based on machine learning tends to be more accurate, but it relies on the quality of the corpus labeled wityh polarity.</font> &lt;依赖于语料库的极性标记质量&gt;</p><br/><p><strong>Deep learning</strong> into sentiment analysis.</p><ul><li><p>RNTN - a sentiment tree library, which synthesized semantics on the syntactic tree of binary sentiment polarity.</p></li><li><p>CharSCNN - used two convolutional layers to extract the features of related words and sentences, and mined semantic information.</p></li><li><p>RNN - used the Recurrent Neural Network based on time series information to obtain sentence representation.</p></li><li><p>Tree-Structure Long Short-Term Memory Network Model.</p></li><li><p>Attention mechanism into the LSTM.</p></li></ul><br/><p><font color=purple>Considering that <strong>the feature words of comments</strong> are <code>sparse</code>, and in order to <strong>better capture the context information</strong>, <strong><code>BiLSTM</code></strong> in deep learning is used to obtain the comment representation in this paper.</font></p><br/>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM&quot;&gt;&lt;a href=&quot;#Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM&quot; class=&quot;headerlin
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="paper" scheme="http://yoursite.com/tags/paper/"/>
+    
+      <category term="sentiment analysis" scheme="http://yoursite.com/tags/sentiment-analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>A Survey of the Applications of Sentiment Analysis</title>
