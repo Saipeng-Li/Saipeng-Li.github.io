@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-04T10:43:48.911Z</updated>
+  <updated>2021-02-05T06:01:30.025Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>神经网络知识 - 卷积层、池化层、全连接层</title>
+    <link href="http://yoursite.com/2021/02/05/202125-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86-%E5%8D%B7%E7%A7%AF%E5%B1%82%E3%80%81%E6%B1%A0%E5%8C%96%E5%B1%82%E3%80%81%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82/"/>
+    <id>http://yoursite.com/2021/02/05/202125-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86-%E5%8D%B7%E7%A7%AF%E5%B1%82%E3%80%81%E6%B1%A0%E5%8C%96%E5%B1%82%E3%80%81%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82/</id>
+    <published>2021-02-05T04:50:00.000Z</published>
+    <updated>2021-02-05T06:01:30.025Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h2><p><strong>作用：对输入的图片进行特征提取</strong></p><p>过程：输入的图片与kernel进行卷积得出输出。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckdxx1qlj312c0j0ace.jpg" style="zoom:67%;" /><p>激活函数：卷积层的最后一部分。作用：增加输出的非线性。常用ReLu或者Tanh激活函数。</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckfbmrkdj312c0j0ace.jpg" style="zoom:67%;" /><br/><h2 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h2><p><strong>作用：降低输入图片的尺寸</strong></p><p>卷积神经网络中，每个卷积层后面总会跟一个池化层。池化层的作用是加速运算并且使得一些检测到的特征更robust。</p><p>也会用到kernel和步长。下图中2*2的filter用于池化4*4的输入，步长为2.</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckijn7c1j311q0c2q41.jpg" alt=""></p><p>左边为最大池化、右边为平均池化。</p><br/><h2 id="全连接层"><a href="#全连接层" class="headerlink" title="全连接层"></a>全连接层</h2><p>全连接层出现在卷积神经网络的末尾。</p><p>全连接层之前，前面很多层所产生的<code>feature map</code>被压缩成一个向量。这个向量被喂到全连接层中。</p><p>全连接层的输出是一个<strong>一维</strong>的特征向量。</p><p>E.g 图像二分类.</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gncltgvx08j311g0bmq79.jpg" alt=""></p><p>输入为32*32*3的RGB三通道图，输出尺寸为2(二分类)。第一层为5*5*3kernel的卷积层，第二层为kernel尺寸为2的最大池化层，第三层为5*5*3kernel的卷积层，第四层为kernel尺寸为2的最大池化层，其输出被压缩为一个向量。被喂到最后两层全连接层。</p><p>注⚠️：对于RGB三通道的彩色图片，在卷积时，每个filter内部也有三个和通道对应的矩阵。三个通道channel一起同步卷积。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;卷积层&quot;&gt;&lt;a href=&quot;#卷积层&quot; class=&quot;headerlink&quot; title=&quot;卷积层&quot;&gt;&lt;/a&gt;卷积层&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;作用：对输入的图片进行特征提取&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;过程：输入的图片与kernel进行卷积得出输出。&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="nlp" scheme="http://yoursite.com/categories/nlp/"/>
+    
+    
+      <category term="nlp" scheme="http://yoursite.com/tags/nlp/"/>
+    
+  </entry>
   
   <entry>
     <title>PyTorch-TensorBoard绘制损失函数曲线</title>
