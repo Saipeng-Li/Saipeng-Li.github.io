@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="杂," />
+  <meta name="keywords" content="nlp," />
 
 
 
@@ -83,18 +83,23 @@
 
 
 
-<meta name="description" content="Hello World1234567#include&lt;iostream&gt;using namespace std;int main()&amp;#123;    cout&lt;&lt;&quot;Hello world&quot;;    return 0;&amp;#125;">
+<meta name="description" content="转载：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;ac772ec40192 卷积层作用：对输入的图片进行特征提取 过程：输入的图片与kernel进行卷积得出输出。   激活函数：卷积层的最后一部分。作用：增加输出的非线性。常用ReLu或者Tanh激活函数。     池化层作用：降低输入图片的尺寸 卷积神经网络中，每个卷积层后面总会跟一个池化层。池化层的作用是加速运算并且使得一些检测到的特征">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My first blog">
-<meta property="og:url" content="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/index.html">
+<meta property="og:title" content="神经网络知识 - 卷积层、池化层、全连接层">
+<meta property="og:url" content="http://yoursite.com/2021/02/05/20210205-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86-%E5%8D%B7%E7%A7%AF%E5%B1%82%E3%80%81%E6%B1%A0%E5%8C%96%E5%B1%82%E3%80%81%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="Hello World1234567#include&lt;iostream&gt;using namespace std;int main()&amp;#123;    cout&lt;&lt;&quot;Hello world&quot;;    return 0;&amp;#125;">
+<meta property="og:description" content="转载：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;ac772ec40192 卷积层作用：对输入的图片进行特征提取 过程：输入的图片与kernel进行卷积得出输出。   激活函数：卷积层的最后一部分。作用：增加输出的非线性。常用ReLu或者Tanh激活函数。     池化层作用：降低输入图片的尺寸 卷积神经网络中，每个卷积层后面总会跟一个池化层。池化层的作用是加速运算并且使得一些检测到的特征">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-14T14:32:24.000Z">
-<meta property="article:modified_time" content="2021-01-24T11:52:14.414Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnckdxx1qlj312c0j0ace.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnckfbmrkdj312c0j0ace.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnckijn7c1j311q0c2q41.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gncltgvx08j311g0bmq79.jpg">
+<meta property="article:published_time" content="2021-02-05T04:50:00.000Z">
+<meta property="article:modified_time" content="2021-02-05T06:10:04.709Z">
 <meta property="article:author" content="Ci">
-<meta property="article:tag" content="杂">
+<meta property="article:tag" content="nlp">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnckdxx1qlj312c0j0ace.jpg">
 
 
 
@@ -124,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/02/05/20210205-神经网络知识-卷积层、池化层、全连接层/"/>
 
 
 
 
 
-  <title>My first blog | 辞</title>
+  <title>神经网络知识 - 卷积层、池化层、全连接层 | 辞</title>
   
 
 
@@ -265,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/05/20210205-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86-%E5%8D%B7%E7%A7%AF%E5%B1%82%E3%80%81%E6%B1%A0%E5%8C%96%E5%B1%82%E3%80%81%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ci">
@@ -282,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My first blog</h1>
+          <h1 class="post-title" itemprop="name headline">神经网络知识 - 卷积层、池化层、全连接层</h1>
         
 
         <div class="post-meta">
@@ -294,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-14T22:32:24+08:00">
-                2020-01-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-05T12:50:00+08:00">
+                2021-02-05
               </time>
             
 
@@ -317,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/nlp/" itemprop="url" rel="index">
+                    <span itemprop="name">nlp</span>
                   </a>
                 </span>
 
@@ -348,7 +353,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  20 word
+                  392 word
                 </span>
               
 
@@ -385,8 +390,30 @@
       
 
       
-        <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>转载：<a href="https://www.jianshu.com/p/ac772ec40192" target="_blank" rel="noopener">https://www.jianshu.com/p/ac772ec40192</a></p>
+<h2 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h2><p><strong>作用：对输入的图片进行特征提取</strong></p>
+<p>过程：输入的图片与kernel进行卷积得出输出。</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckdxx1qlj312c0j0ace.jpg" style="zoom:67%;" />
 
+<p>激活函数：卷积层的最后一部分。作用：增加输出的非线性。常用ReLu或者Tanh激活函数。</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckfbmrkdj312c0j0ace.jpg" style="zoom:67%;" />
+
+<br/>
+
+<h2 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h2><p><strong>作用：降低输入图片的尺寸</strong></p>
+<p>卷积神经网络中，每个卷积层后面总会跟一个池化层。池化层的作用是加速运算并且使得一些检测到的特征更robust。</p>
+<p>也会用到kernel和步长。下图中2*2的filter用于池化4*4的输入，步长为2.</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnckijn7c1j311q0c2q41.jpg" alt=""></p>
+<p>左边为最大池化、右边为平均池化。</p>
+<br/>
+
+<h2 id="全连接层"><a href="#全连接层" class="headerlink" title="全连接层"></a>全连接层</h2><p>全连接层出现在卷积神经网络的末尾。</p>
+<p>全连接层之前，前面很多层所产生的<code>feature map</code>被压缩成一个向量。这个向量被喂到全连接层中。</p>
+<p>全连接层的输出是一个<strong>一维</strong>的特征向量。</p>
+<p>E.g 图像二分类.</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gncltgvx08j311g0bmq79.jpg" alt=""></p>
+<p>输入为32*32*3的RGB三通道图，输出尺寸为2(二分类)。第一层为5*5*3kernel的卷积层，第二层为kernel尺寸为2的最大池化层，第三层为5*5*3kernel的卷积层，第四层为kernel尺寸为2的最大池化层，其输出被压缩为一个向量。被喂到最后两层全连接层。</p>
+<p>注⚠️：对于RGB三通道的彩色图片，在卷积时，每个filter内部也有三个和通道对应的矩阵。三个通道channel一起同步卷积。</p>
 
       
     </div>
@@ -445,7 +472,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%9D%82/" rel="tag"># 杂</a>
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
           
         </div>
       
@@ -458,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/30/2020-00-00-LeetCode-0-%E6%A8%A1%E7%89%88/" rel="next" title="LeetCode-0 模版">
-                <i class="fa fa-chevron-left"></i> LeetCode-0 模版
+              <a href="/2021/02/04/20210204-PyTorch-TensorBoard%E7%BB%98%E5%88%B6%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E6%9B%B2%E7%BA%BF/" rel="next" title="PyTorch-TensorBoard绘制损失函数曲线">
+                <i class="fa fa-chevron-left"></i> PyTorch-TensorBoard绘制损失函数曲线
               </a>
             
           </div>
@@ -468,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/01/24/20210124-%E6%A6%82%E5%BF%B5%E8%BE%A8%E6%9E%90-Epoch,Batch,Iteration/" rel="prev" title="概念辨析-Epoch,Batch,Iteration">
-                概念辨析-Epoch,Batch,Iteration <i class="fa fa-chevron-right"></i>
+              <a href="/2021/02/14/20210214-Aspect-level%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90/" rel="prev" title="Aspect-level情感分析">
+                Aspect-level情感分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#卷积层"><span class="nav-number">1.</span> <span class="nav-text">卷积层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#池化层"><span class="nav-number">2.</span> <span class="nav-text">池化层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全连接层"><span class="nav-number">3.</span> <span class="nav-text">全连接层</span></a></li></ol></div>
             
 
           </div>
