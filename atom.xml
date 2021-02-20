@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-02-14T10:39:16.010Z</updated>
+  <updated>2021-02-20T03:16:36.956Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Attention机制</title>
+    <link href="http://yoursite.com/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/"/>
+    <id>http://yoursite.com/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/</id>
+    <published>2021-02-18T02:19:00.000Z</published>
+    <updated>2021-02-20T03:16:36.956Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载：<a href="https://zhuanlan.zhihu.com/p/53682800" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53682800</a></p><h2 id="Attention机制思想"><a href="#Attention机制思想" class="headerlink" title="Attention机制思想"></a>Attention机制思想</h2><p>当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些<strong>关键</strong>的信息输入来进行处理，从而提高神经网络的效率。</p><br/><h2 id="Attention计算流程"><a href="#Attention计算流程" class="headerlink" title="Attention计算流程"></a>Attention计算流程</h2><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg" alt="v2-54fe529ded98721f35277a5bfa79febc_r" style="zoom: 67%;" /><p><strong>Attention机制的实质就是个寻址过程</strong>。给定一个和任务相关的查询<strong>Query</strong>向量q，通过计算与<strong>Key</strong>的注意力分布并附加在<strong>Value</strong>上，从而计算出<strong>Attention Value</strong>。</p><p>不需要将所有的N个输入信息都输入到神经网络进行计算，只需要从X中选择一些<strong>和任务相关</strong>的信息输入给神经网络。</p><h3 id="三步"><a href="#三步" class="headerlink" title="三步"></a>三步</h3><ol><li><h4 id="信息输入"><a href="#信息输入" class="headerlink" title="信息输入"></a>信息输入</h4><p><strong>X</strong> = [x1,…,xN]表示N个输入信息；</p></li><li><h4 id="计算注意力分布-alpha"><a href="#计算注意力分布-alpha" class="headerlink" title="计算注意力分布$\alpha$"></a>计算注意力分布$\alpha$</h4><p>令key=value=<strong>X</strong>, 给出注意力分布：</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrheboo6hj30lm01gq2y.jpg" style="zoom: 33%;" /><p>将$\alpha_i$称为注意力分布(概率分布)，s(Xi,q)为注意力打分机制。打分机制有多种：</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrhh9z4wwj30ow07swf3.jpg" style="zoom: 33%;" /></li><li><h4 id="根据注意力分布-alpha-计算输入信息的加权平均"><a href="#根据注意力分布-alpha-计算输入信息的加权平均" class="headerlink" title="根据注意力分布$\alpha$计算输入信息的加权平均"></a>根据注意力分布$\alpha$计算输入信息的加权平均</h4><p>注意力分布$\alpha_i$可以理解为在上下文查询q时，第i个信息受关注的程度。</p><p>采用一种“软性”的信息选择机制对输入信息X进行编码为：</p><p>$att(q,X) = \sum_{i=1}^N \alpha_i X_i$ (软性注意力机制)</p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnttwb4wwzj30gc08w750.jpg" alt="v2-aa371755dc73b7137149b8d2905fc4ba_r" style="zoom:50%;" /><p>软性注意力机制有两种：普通模式(key=value=X)和键值对模式(key!=value).</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转载：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/53682800&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/53682800&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;A
+      
+    
+    </summary>
+    
+    
+      <category term="nlp" scheme="http://yoursite.com/categories/nlp/"/>
+    
+    
+      <category term="nlp" scheme="http://yoursite.com/tags/nlp/"/>
+    
+      <category term="attention" scheme="http://yoursite.com/tags/attention/"/>
+    
+  </entry>
   
   <entry>
     <title>Aspect-level情感分析</title>

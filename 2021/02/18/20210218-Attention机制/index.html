@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="杂," />
+  <meta name="keywords" content="nlp,attention," />
 
 
 
@@ -83,18 +83,24 @@
 
 
 
-<meta name="description" content="Hello World1234567#include&lt;iostream&gt;using namespace std;int main()&amp;#123;    cout&lt;&lt;&quot;Hello world&quot;;    return 0;&amp;#125;">
+<meta name="description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。   Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Valu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My first blog">
-<meta property="og:url" content="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/index.html">
+<meta property="og:title" content="Attention机制">
+<meta property="og:url" content="http://yoursite.com/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="Hello World1234567#include&lt;iostream&gt;using namespace std;int main()&amp;#123;    cout&lt;&lt;&quot;Hello world&quot;;    return 0;&amp;#125;">
+<meta property="og:description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。   Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Valu">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-14T14:32:24.000Z">
-<meta property="article:modified_time" content="2021-01-24T11:52:14.414Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrheboo6hj30lm01gq2y.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrhh9z4wwj30ow07swf3.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnttwb4wwzj30gc08w750.jpg">
+<meta property="article:published_time" content="2021-02-18T02:19:00.000Z">
+<meta property="article:modified_time" content="2021-02-20T03:16:36.956Z">
 <meta property="article:author" content="Ci">
-<meta property="article:tag" content="杂">
+<meta property="article:tag" content="nlp">
+<meta property="article:tag" content="attention">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg">
 
 
 
@@ -124,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/02/18/20210218-Attention机制/"/>
 
 
 
 
 
-  <title>My first blog | 辞</title>
+  <title>Attention机制 | 辞</title>
   
 
 
@@ -265,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/14/2020-01-14-My-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ci">
@@ -282,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My first blog</h1>
+          <h1 class="post-title" itemprop="name headline">Attention机制</h1>
         
 
         <div class="post-meta">
@@ -294,8 +300,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-14T22:32:24+08:00">
-                2020-01-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-18T10:19:00+08:00">
+                2021-02-18
               </time>
             
 
@@ -317,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
+                  <a href="/categories/nlp/" itemprop="url" rel="index">
+                    <span itemprop="name">nlp</span>
                   </a>
                 </span>
 
@@ -348,7 +354,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  20 word
+                  358 word
                 </span>
               
 
@@ -385,8 +391,31 @@
       
 
       
-        <h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>转载：<a href="https://zhuanlan.zhihu.com/p/53682800" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53682800</a></p>
+<h2 id="Attention机制思想"><a href="#Attention机制思想" class="headerlink" title="Attention机制思想"></a>Attention机制思想</h2><p>当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些<strong>关键</strong>的信息输入来进行处理，从而提高神经网络的效率。</p>
+<br/>
 
+<h2 id="Attention计算流程"><a href="#Attention计算流程" class="headerlink" title="Attention计算流程"></a>Attention计算流程</h2><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg" alt="v2-54fe529ded98721f35277a5bfa79febc_r" style="zoom: 67%;" />
+
+<p><strong>Attention机制的实质就是个寻址过程</strong>。给定一个和任务相关的查询<strong>Query</strong>向量q，通过计算与<strong>Key</strong>的注意力分布并附加在<strong>Value</strong>上，从而计算出<strong>Attention Value</strong>。</p>
+<p>不需要将所有的N个输入信息都输入到神经网络进行计算，只需要从X中选择一些<strong>和任务相关</strong>的信息输入给神经网络。</p>
+<h3 id="三步"><a href="#三步" class="headerlink" title="三步"></a>三步</h3><ol>
+<li><h4 id="信息输入"><a href="#信息输入" class="headerlink" title="信息输入"></a>信息输入</h4><p><strong>X</strong> = [x1,…,xN]表示N个输入信息；</p>
+</li>
+<li><h4 id="计算注意力分布-alpha"><a href="#计算注意力分布-alpha" class="headerlink" title="计算注意力分布$\alpha$"></a>计算注意力分布$\alpha$</h4><p>令key=value=<strong>X</strong>, 给出注意力分布：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrheboo6hj30lm01gq2y.jpg" style="zoom: 33%;" />
+
+<p>将$\alpha_i$称为注意力分布(概率分布)，s(Xi,q)为注意力打分机制。打分机制有多种：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrhh9z4wwj30ow07swf3.jpg" style="zoom: 33%;" />
+</li>
+<li><h4 id="根据注意力分布-alpha-计算输入信息的加权平均"><a href="#根据注意力分布-alpha-计算输入信息的加权平均" class="headerlink" title="根据注意力分布$\alpha$计算输入信息的加权平均"></a>根据注意力分布$\alpha$计算输入信息的加权平均</h4><p>注意力分布$\alpha_i$可以理解为在上下文查询q时，第i个信息受关注的程度。</p>
+<p>采用一种“软性”的信息选择机制对输入信息X进行编码为：</p>
+<p>$att(q,X) = \sum_{i=1}^N \alpha_i X_i$ (软性注意力机制)</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnttwb4wwzj30gc08w750.jpg" alt="v2-aa371755dc73b7137149b8d2905fc4ba_r" style="zoom:50%;" />
+
+<p>软性注意力机制有两种：普通模式(key=value=X)和键值对模式(key!=value).</p>
+</li>
+</ol>
 
       
     </div>
@@ -445,7 +474,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E6%9D%82/" rel="tag"># 杂</a>
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
+          
+            <a href="/tags/attention/" rel="tag"># attention</a>
           
         </div>
       
@@ -458,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/30/2020-00-00-LeetCode-0-%E6%A8%A1%E7%89%88/" rel="next" title="LeetCode-0 模版">
-                <i class="fa fa-chevron-left"></i> LeetCode-0 模版
+              <a href="/2021/02/14/20210214-Aspect-level%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90/" rel="next" title="Aspect-level情感分析">
+                <i class="fa fa-chevron-left"></i> Aspect-level情感分析
               </a>
             
           </div>
@@ -467,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/01/24/20210124-%E6%A6%82%E5%BF%B5%E8%BE%A8%E6%9E%90-Epoch,Batch,Iteration/" rel="prev" title="概念辨析-Epoch,Batch,Iteration">
-                概念辨析-Epoch,Batch,Iteration <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">1.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention机制思想"><span class="nav-number">1.</span> <span class="nav-text">Attention机制思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention计算流程"><span class="nav-number">2.</span> <span class="nav-text">Attention计算流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三步"><span class="nav-number">2.1.</span> <span class="nav-text">三步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息输入"><span class="nav-number">2.1.1.</span> <span class="nav-text">信息输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算注意力分布-alpha"><span class="nav-number">2.1.2.</span> <span class="nav-text">计算注意力分布$\alpha$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据注意力分布-alpha-计算输入信息的加权平均"><span class="nav-number">2.1.3.</span> <span class="nav-text">根据注意力分布$\alpha$计算输入信息的加权平均</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
