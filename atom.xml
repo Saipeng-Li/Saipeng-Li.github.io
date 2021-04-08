@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-04-08T14:00:57.839Z</updated>
+  <updated>2021-04-08T16:12:43.800Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>梯度累积</title>
+    <link href="http://yoursite.com/2021/04/09/20210409-%E6%A2%AF%E5%BA%A6%E7%B4%AF%E7%A7%AF/"/>
+    <id>http://yoursite.com/2021/04/09/20210409-%E6%A2%AF%E5%BA%A6%E7%B4%AF%E7%A7%AF/</id>
+    <published>2021-04-08T16:12:00.000Z</published>
+    <updated>2021-04-08T16:12:43.800Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="梯度累积"><a href="#梯度累积" class="headerlink" title="梯度累积"></a>梯度累积</h2><p>Question：GPU显存不足的情况下，如何增加batch_size?</p><p>Ans：将batch数据，分成多个mini_batch, 然后进行<code>梯度累积</code>；</p><p>引：<a href="https://xingwxiong.github.io/2020/04/07/gradients-accumulation/" target="_blank" rel="noopener">https://xingwxiong.github.io/2020/04/07/gradients-accumulation/</a></p><p>1⃣️ 将loss累加多次，然后进行反向传播；(这样的做法会导致计算图的中间变量会一直保存，占用内存)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">optimizer.zero_grad()</span><br><span class="line">loss = <span class="number">0</span></span><br><span class="line"><span class="comment"># minibatch_size = global_batch_size / iter_size</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(iter_size):</span><br><span class="line">    <span class="comment"># output here as the size of minibatch</span></span><br><span class="line">    loss += criterion(output, target_var)</span><br><span class="line">loss = loss / iter_size</span><br><span class="line">loss.backward()</span><br><span class="line">optimizer.step()</span><br></pre></td></tr></table></figure><p>2⃣️ 进行多次误差反向传播，并对梯度进行累加，每次反向传播都会清除计算图中的中间变量，这样会节省内存；</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">optimizer.zero_grad()</span><br><span class="line">loss_sum = <span class="number">0</span></span><br><span class="line"><span class="comment"># minibatch_size = global_batch_size / iter_size</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(iter_size):</span><br><span class="line">    loss = criterion(output, target_var) / iter_size</span><br><span class="line">    loss.backward()</span><br><span class="line">    loss_sum += loss</span><br><span class="line">optimizer.step()</span><br></pre></td></tr></table></figure><p>⚠️<strong>为了经过iter_size次迭代后的累积梯度跟使用一个大的batch_size一样，需要将每次的<code>loss</code>除以<code>iter_size</code></strong>。</p><p>补充：</p><ol><li>如果想在反向传播计算后还保存计算图中的中间变量，可以指定 <code>retain_graph</code> 选项，即 <code>loss.backward(retain_graph=True)</code>。</li><li>累积梯度的做法，不适用于模拟大 batchsize 的 Batch Normalization。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;梯度累积&quot;&gt;&lt;a href=&quot;#梯度累积&quot; class=&quot;headerlink&quot; title=&quot;梯度累积&quot;&gt;&lt;/a&gt;梯度累积&lt;/h2&gt;&lt;p&gt;Question：GPU显存不足的情况下，如何增加batch_size?&lt;/p&gt;
+&lt;p&gt;Ans：将batch数据，分成多个m
+      
+    
+    </summary>
+    
+    
+      <category term="pytorch" scheme="http://yoursite.com/categories/pytorch/"/>
+    
+    
+      <category term="pytorch" scheme="http://yoursite.com/tags/pytorch/"/>
+    
+      <category term="gradient_accumulate" scheme="http://yoursite.com/tags/gradient-accumulate/"/>
+    
+  </entry>
   
   <entry>
     <title>梯度裁剪(gradient_clip_norm)</title>
