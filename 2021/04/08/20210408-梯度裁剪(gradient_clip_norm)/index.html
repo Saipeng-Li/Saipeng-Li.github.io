@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="pytorch,clip_grad_norm," />
 
 
 
@@ -83,15 +83,18 @@
 
 
 
-<meta name="description" content="辞-Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辞">
-<meta property="og:url" content="http://yoursite.com/tags/paper/index.html">
+<meta name="description" content="梯度截断(Gradient Clip Norm)引：https:&#x2F;&#x2F;blog.csdn.net&#x2F;csnc007&#x2F;article&#x2F;details&#x2F;97804398 1from torch.nn.utils import clip_grad_norm  用来解决梯度爆炸问题：  首先设置一个梯度阈值：clip_gradient 在后向传播中求出各参数的梯度，这里不直接使用梯度进行参数更新，而是求这些梯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="梯度裁剪(gradient_clip_norm)">
+<meta property="og:url" content="http://yoursite.com/2021/04/08/20210408-%E6%A2%AF%E5%BA%A6%E8%A3%81%E5%89%AA(gradient_clip_norm)/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="辞-Blog">
+<meta property="og:description" content="梯度截断(Gradient Clip Norm)引：https:&#x2F;&#x2F;blog.csdn.net&#x2F;csnc007&#x2F;article&#x2F;details&#x2F;97804398 1from torch.nn.utils import clip_grad_norm  用来解决梯度爆炸问题：  首先设置一个梯度阈值：clip_gradient 在后向传播中求出各参数的梯度，这里不直接使用梯度进行参数更新，而是求这些梯">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-08T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-08T14:00:57.839Z">
 <meta property="article:author" content="Ci">
-<meta property="article:tag" content="Ci">
+<meta property="article:tag" content="pytorch">
+<meta property="article:tag" content="clip_grad_norm">
 <meta name="twitter:card" content="summary">
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/paper/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/04/08/20210408-梯度裁剪(gradient_clip_norm)/"/>
 
 
 
 
 
-  <title>Tag: paper | 辞</title>
+  <title>梯度裁剪(gradient_clip_norm) | 辞</title>
   
 
 
@@ -155,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,175 +252,255 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>paper<small>Tag</small>
-        </h1>
-      </div>
-
-      
-
-        
-	 
-	 
-	
-	 
-	   
-	   <div class="collection-title">
-	     <h2 class="archive-year motion-element" id="archive-year-2021">2021</h2>
-	   </div>
-	 
-	
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/08/20210408-%E6%A2%AF%E5%BA%A6%E8%A3%81%E5%89%AA(gradient_clip_norm)/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ci">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="辞">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/02/02/paper/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/" itemprop="url">
-              
-                <span itemprop="name">Sentiment Analysis of Comment Texts Based on BiLSTM</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">梯度裁剪(gradient_clip_norm)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-02-02T11:57:00+08:00"
-              content="2021-02-02" >
-          02-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-08T22:00:00+08:00">
+                2021-04-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/pytorch/" itemprop="url" rel="index">
+                    <span itemprop="name">pytorch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  159 word
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-	 
-	 
-	
-	 
-	
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/02/01/paper/20210201-A-Survey-of-the-Applications-of-Sentiment-Analysis/" itemprop="url">
-              
-                <span itemprop="name">A Survey of the Applications of Sentiment Analysis</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-02-01T17:11:00+08:00"
-              content="2021-02-01" >
-          02-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
       
 
-        
-	 
-	 
-	
-	 
-	
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/01/31/paper/20210131-Sentiment-Analysis-using-Deep-Learning-%E2%80%93-A-survey/" itemprop="url">
-              
-                <span itemprop="name">Sentiment Analysis using Deep Learning – A survey</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-01-31T19:06:00+08:00"
-              content="2021-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
       
+        <h2 id="梯度截断-Gradient-Clip-Norm"><a href="#梯度截断-Gradient-Clip-Norm" class="headerlink" title="梯度截断(Gradient Clip Norm)"></a>梯度截断(Gradient Clip Norm)</h2><p>引：<a href="https://blog.csdn.net/csnc007/article/details/97804398" target="_blank" rel="noopener">https://blog.csdn.net/csnc007/article/details/97804398</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.nn.utils <span class="keyword">import</span> clip_grad_norm</span><br></pre></td></tr></table></figure>
 
-        
-	 
-	 
-	
-	 
-	
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/01/31/paper/20210131-Survey-Paper-on-Sentiment-Analysis---Techniques-and-Challenges/" itemprop="url">
-              
-                <span itemprop="name">Survey Paper on Sentiment Analysis - Techniques and Challenges</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-01-31T09:36:00+08:00"
-              content="2021-01-31" >
-          01-31
-        </time>
-      </div>
-
-    </header>
-  </article>
+<p>用来解决梯度爆炸问题：</p>
+<ul>
+<li>首先设置一个梯度阈值：clip_gradient</li>
+<li>在后向传播中求出各参数的梯度，这里不直接使用梯度进行参数更新，而是求这些梯度的l2范数</li>
+<li>然后比较梯度的l2范数||g||与clip_gradient的大小</li>
+<li>如果前者大，求缩放因子clip_gradient/||g|| (梯度越大缩放因子就越小)</li>
+<li>最后将梯度乘上缩放因子得到最后所需要的梯度</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">optimizer.zero_grad()</span><br><span class="line">loss = model(...)</span><br><span class="line">loss.backward()</span><br><span class="line"></span><br><span class="line">torch.nn.utils.clip_grad_norm_(model.parameters(), args.clip)</span><br><span class="line">optimizer.step()</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
 
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:left;font-size:14px;">
+<p style="text-align:center;color: #ccc;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</p>
+        </div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton"  disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="Ci WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
+          
+            <a href="/tags/clip-grad-norm/" rel="tag"># clip_grad_norm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/02/24/2021224-LSA&LDA/" rel="next" title="LSA&LDA">
+                <i class="fa fa-chevron-left"></i> LSA&LDA
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -425,6 +508,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -445,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,7 +557,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -472,7 +568,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -483,7 +579,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -513,6 +609,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度截断-Gradient-Clip-Norm"><span class="nav-number">1.</span> <span class="nav-text">梯度截断(Gradient Clip Norm)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -650,7 +762,9 @@
   
 
   
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
 
 
   

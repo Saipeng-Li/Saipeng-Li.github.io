@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="paper,sentiment analysis," />
+  <meta name="keywords" content="nlp,LSA,LDA," />
 
 
 
@@ -83,19 +83,25 @@
 
 
 
-<meta name="description" content="# Sentiment Analysis of Comment Texts Based on BiLSTM## AbstractIn the current sentiment analysis studies, distributed word representation is mostly used, which only considers the semantic information">
+<meta name="description" content="转载：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;526084cb735d LSA&#x2F;LDA - 关键词提取主题模型认为词与文档之间没有直接的联系，它们应当有一个维度(主题)将它们联系起来。 每个文档对应着一个或多个主题，每个主题都有对应的词分布，通过主题，就可以得到每个文档的词分布。   LSA-潜在语义分析模型在潜在语义分析(LSA)模型首先给出了这样一个“分布式假设”:一个单词的属性是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sentiment Analysis of Comment Texts Based on BiLSTM">
-<meta property="og:url" content="http://yoursite.com/2021/02/02/paper/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/index.html">
+<meta property="og:title" content="LSA&amp;LDA">
+<meta property="og:url" content="http://yoursite.com/2021/02/24/2021224-LSA&LDA/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="# Sentiment Analysis of Comment Texts Based on BiLSTM## AbstractIn the current sentiment analysis studies, distributed word representation is mostly used, which only considers the semantic information">
+<meta property="og:description" content="转载：https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;526084cb735d LSA&#x2F;LDA - 关键词提取主题模型认为词与文档之间没有直接的联系，它们应当有一个维度(主题)将它们联系起来。 每个文档对应着一个或多个主题，每个主题都有对应的词分布，通过主题，就可以得到每个文档的词分布。   LSA-潜在语义分析模型在潜在语义分析(LSA)模型首先给出了这样一个“分布式假设”:一个单词的属性是">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-02T03:57:00.000Z">
-<meta property="article:modified_time" content="2021-02-02T06:18:27.144Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnyewi16o1j30fx0g774s.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnyf9jd07zj30u004jaa7.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnyfco7zq8j30u00bkdgi.jpg">
+<meta property="og:image" content="https://image.jiqizhixin.com/uploads/editor/c9d68859-db6b-469e-a777-b2cbb3965ffb/640.png">
+<meta property="article:published_time" content="2021-02-24T02:21:00.000Z">
+<meta property="article:modified_time" content="2021-02-24T02:48:06.759Z">
 <meta property="article:author" content="Ci">
-<meta property="article:tag" content="paper">
-<meta property="article:tag" content="sentiment analysis">
+<meta property="article:tag" content="nlp">
+<meta property="article:tag" content="LSA">
+<meta property="article:tag" content="LDA">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnyewi16o1j30fx0g774s.jpg">
 
 
 
@@ -125,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/02/02/paper/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/02/24/2021224-LSA&LDA/"/>
 
 
 
 
 
-  <title>Sentiment Analysis of Comment Texts Based on BiLSTM | 辞</title>
+  <title>LSA&LDA | 辞</title>
   
 
 
@@ -266,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/02/paper/20210202-Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/24/2021224-LSA&LDA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ci">
@@ -283,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Sentiment Analysis of Comment Texts Based on BiLSTM</h1>
+          <h1 class="post-title" itemprop="name headline">LSA&LDA</h1>
         
 
         <div class="post-meta">
@@ -295,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-02T11:57:00+08:00">
-                2021-02-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-24T10:21:00+08:00">
+                2021-02-24
               </time>
             
 
@@ -318,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/paper/" itemprop="url" rel="index">
-                    <span itemprop="name">paper</span>
+                  <a href="/categories/nlp/" itemprop="url" rel="index">
+                    <span itemprop="name">nlp</span>
                   </a>
                 </span>
 
@@ -349,7 +355,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  515 word
+                  1.9k word
                 </span>
               
 
@@ -365,7 +371,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3 min
+                  6 min
                 </span>
               
             </div>
@@ -386,72 +392,42 @@
       
 
       
-        <h1 id="Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM"><a href="#Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM" class="headerlink" title="# Sentiment Analysis of Comment Texts Based on BiLSTM"></a># Sentiment Analysis of Comment Texts Based on BiLSTM</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="## Abstract"></a>## Abstract</h2><p>In the current sentiment analysis studies, <code>distributed word representation</code> is mostly used, which only considers <strong>the semantic information of word</strong>, but ignore <strong>the sentiment information of the word</strong>. </p>
-<p>In this paper, <font color=red>an improved word representation method is proposed,</font> which <strong>integrates <em>the contribution of sentiment information</em> into the <em>traditional TF-IDF algorithm</em> and generates weighted word vectors.</strong> <font color=blue>The weighted word vectors are input into bidirectional long short term memory(BiLSTM) to capture the context information effectively.</font></p>
-<p>The proposed sentiment analysis method is compared with the sentiment analysis methods of RNN, CNN, LSTM and NB.</p>
-<br/>
+        <p>转载：<a href="https://www.jianshu.com/p/526084cb735d" target="_blank" rel="noopener">https://www.jianshu.com/p/526084cb735d</a></p>
+<h2 id="LSA-LDA-关键词提取"><a href="#LSA-LDA-关键词提取" class="headerlink" title="LSA/LDA - 关键词提取"></a>LSA/LDA - 关键词提取</h2><p>主题模型认为<strong>词</strong>与<strong>文档</strong>之间没有直接的联系，它们应当有一个维度(<strong>主题</strong>)将它们联系起来。</p>
+<p><strong>每个文档对应着一个或多个主题，每个主题都有对应的词分布，通过主题，就可以得到每个文档的词分布</strong>。</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnyewi16o1j30fx0g774s.jpg" style="zoom:50%;" />
 
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="## Introduction"></a>## Introduction</h2><p>The word vector has a low dimension and contains the semantic information of the word. However, <code>distributed word vectors</code> <strong>do not contain sentiment information about words</strong>. </p>
-<p>In this paper, <strong>the contribution of the word’s sentiment information to text sentiment classiﬁcation</strong> is <strong>embedded into the traditional TF-IDF algorithm</strong>, and the weighted word vector is generated.</p>
-<br/>
-
-
-
-<h2 id="Background"><a href="#Background" class="headerlink" title="## Background"></a>## Background</h2><h3 id="Text-Sentiment-Analysis-Technology"><a href="#Text-Sentiment-Analysis-Technology" class="headerlink" title="### Text Sentiment Analysis Technology"></a>### Text Sentiment Analysis Technology</h3><p>Text sentiment analysis can be divided into:</p>
+<h3 id="LSA-潜在语义分析模型"><a href="#LSA-潜在语义分析模型" class="headerlink" title="LSA-潜在语义分析模型"></a>LSA-潜在语义分析模型</h3><p>在潜在语义分析(LSA)模型首先给出了这样一个“分布式假设”:一个单词的属性是由它所处的环境刻画的。这也就意味着如果两个单词在含义上比较接近，那么它们也会出现在相似的文本中，也就是说具有相似的上下文。</p>
+<p>LSA首先构建了这样一个 ‘‘单词-文档’’ 矩阵:矩阵的每一行表示一个单词，矩阵的每一列表示一个文章，第<em>i</em>行第<em>j</em>列的值表示第<em>i</em>个单词在第<em>j</em>个段落里面出现了几次或者表示该单词的tf-idf值等等。LSA模型在构建好了单词-文档矩阵之后，出于以下几种可能的原因，我们会使用奇异值分解(Singular Value Decomposition，SVD)的方法来寻找该矩阵的一个低阶近似:</p>
 <ul>
-<li><p><strong>According to the object of sentiment analysis</strong></p>
-<ul>
-<li>three levels: <code>words</code>,<code>sentences</code>,<code>chapters</code>.</li>
+<li>原始的单词-文档矩阵过于庞大而会消耗过多的计算资源。在这种情况下，近似的低阶矩阵可以被解释为原始矩阵的一个‘‘近似’’。</li>
+<li>原始的单词-文档矩阵往往包含着很多噪音，也就是说并不是里面的任何一个信息都是有用的。在这种情况下，求近似的矩阵的过程可以看成对原来的矩阵进行‘‘降噪’’。</li>
+<li>原始的单词-文档矩阵相对于‘‘真实的’’单词-文档矩阵而言过于稀疏。所谓真实的矩阵，就是指将世界上所有出现的单词和文档都考虑在内得到的矩阵，而这显然是不可能的。我们只能通过分析一部分数据来得到真实矩阵的一种近似。在这种情况下，近似的矩阵可以看成是原始矩阵的一种‘‘精简’’版本。</li>
 </ul>
-</li>
-<li><p><strong>According to the classifictaion method of sentiment orientation</strong></p>
-<ul>
-<li><code>binary sentiment classification</code>,<code>ternary sentiment classification</code> and <code>multi-sentiment classification</code>.</li>
-</ul>
-</li>
-<li><p><strong>According to the text sentiment analysis methods</strong></p>
-<ul>
-<li>sentiment analysis method based on <code>sentiment dictionary</code>,<code>machine learning</code> and <code>deep learning</code>.</li>
-</ul>
-</li>
-</ul>
-<br/>
+<h3 id="PLSA-概率潜在语义分析模型"><a href="#PLSA-概率潜在语义分析模型" class="headerlink" title="PLSA-概率潜在语义分析模型"></a>PLSA-概率潜在语义分析模型</h3><p>概率潜在语义分析(PLSA)模型其实是为了克服潜在语义分析(LSA)模型存在的一些缺点而被提出的。LSA的一个根本问题在于，尽管我们可以把<em>U</em>k和<em>V</em>k的每一列都看成是一个话题，但是由于每一列的值都可以看成是几乎没有限制的实数值，因此我们无法去进一步解释这些值到底是什么意思，也更无法从概率的角度来理解这个模型。而寻求概率意义上的解释则是贝叶斯推断的核心思想之一。</p>
+<p><strong>PLSA模型则通过一个生成模型来为LSA赋予了概率意义上的解释。该模型假设，每一篇文档都包含一系列可能的潜在话题，文档中的每一个单词都不是凭空产生的，而是在这些潜在的话题的指引下通过一定的概率生成的。</strong></p>
+<p>在 PLSA 模型里面，话题其实是一种单词上的概率分布，每一个话题都代表着一个不同的单词上的概率分布，而每个文档又可以看成是话题上的概率分布。每篇文档就是通过这样一个两层的概率分布生成的，这也正是PLSA 提出的生成模型的核心思想。</p>
+<p>PLSA 通过下面这个式子对 <em>d</em> 和 w 的联合分布进行了建模:</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnyf9jd07zj30u004jaa7.jpg" alt="640"></p>
+<p>该模型中的<em>z</em>的数量是需要事先给定的一个超参数。需要注意的是，上面这个式子里面给出了 <em>P</em>(w, <em>d</em>)的两种表达方式，在前一个式子里，<em>d</em>和w都是在给定<em>z</em>的前提下通过条件概率生成出来的，它们的生成方式是相似的，因此是‘‘对称’’的; 在后一个式子里，首先给定<em>d</em>，然后根据<em>P</em>(<em>z</em>|<em>d</em>)生成可能的话题 <em>z</em>，然后再根据 <em>P</em>(w|<em>z</em>) 生成可能的单词w，由于在这个式子里面单词和文档的生成并不相似，所以是‘‘非对称’’的。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnyfco7zq8j30u00bkdgi.jpg" alt="640"></p>
+<p>PLSA 模型中非对称形式的 Plate Notation表示法。其中<em>d</em>表示一篇文档，<em>z</em>表示由文档生成的一个话题，w表示由话题生成的一个单词。<strong>在这个模型中，<em>d</em>和w是已经观测到的变量，而<em>z</em>是未知的变量(代表潜在的话题)。</strong> </p>
+<p><font color=red>容易发现，对于一个新的文档而言，我们无法得知它对应的 <em>P</em>(<em>d</em>) 究竟是什么， 因此尽管PLSA 模型在给定的文档上是一个生成模型，它却无法生成新的未知的文档。该模型的另外的一个问题在于，随着文档数量的增加，<em>P</em>(<em>z</em>|<em>d</em>)的参数也会随着线性增加，这就导致无论有多少训练数据，都容易导致模型的过拟合问题。这两点成为了限制 PLSA 模型被更加广泛使用的两大缺陷。</font></p>
+<h3 id="LDA-潜在狄利克雷分配模型"><a href="#LDA-潜在狄利克雷分配模型" class="headerlink" title="LDA-潜在狄利克雷分配模型"></a>LDA-潜在狄利克雷分配模型</h3><p>从根本上来讲，LDA 模型是在 PLSA 的模型的基础上引入了参数的先验分布这个概念。</p>
+<p>在 PLSA 这个模型里，对于一个未知的新文档<em>d</em>，我们对于<em>P</em>(<em>d</em>)一无所知，而这个其实是不符合人的经验的。或者说，它没有去使用本来可以用到的信息，而这部分信息就是LDA中所谓的<strong>先验信息</strong>。</p>
+<p>具体来说，在LDA中，首先每一个文档都被看成跟有限个给定话题中的每一个存在着或多或少的关联性，而这种关联性则是用话题上的概率分布来刻画的，这一点与PLSA其实是一致的。</p>
+<p>但是在 LDA 模型中，每个文档关于话题的概率分布都被赋予了一个先验分布，这个先验一般是用稀疏形式的狄利克雷分布表示的。 这种稀疏形式的狄利克雷先验可以看成是编码了人类的这样一种先验知识:一般而言，一篇文章的主题更有可能是集中于少数几个话题上，而很少说在单独一篇文章内同时在很多话题上都有所涉猎并且没有明显的重点。</p>
+<p>此外，LDA 模型还对一个话题在所有单词上的概率分布也赋予了一个稀疏形式的狄利克雷先验，它的直观解释也是类似的:在一个单独的话题中，多数情况是少部分(跟这个话题高度相关的)词出现的频率会很高，而其他的词出现的频率则明显较低。这样两种先验使得 LDA 模型能够比 PLSA 更好地刻画文档-话题-单词这三者的关系。</p>
+<p><font color=green>事实上，从PLSA的结果上来看，它实际上相当于把LDA模型中的先验分布转变为均匀分布，然后对所要求的参数求最大后验估计(在先验是均匀分布的前提下，这也等价于求参数的最大似然估计)，而这也正反映出了一个较为合理的先验对于建模是非常重要的。</font></p>
+<img src="https://image.jiqizhixin.com/uploads/editor/c9d68859-db6b-469e-a777-b2cbb3965ffb/640.png" alt="640" style="zoom:50%;" />
 
-<p>Method based on <font color=red>sentiment dictionary</font> uses the dictionary to identify sentiment words in the text and obtain sentiment values. </p>
-<p>Then according to the sentiment calculation rules, the text sentiment tendency is obtained.</p>
-<p><font color=green>Text sentiment analysis based on sentiment dictionary does not require manual labeling of samples and is easy to implement.</font></p>
-<p><font color=orange>The quality of the analysis is highly dependent on the sentiment dictionary. Most of the sentiment dictionaries have problems such as <code>insufficient coverage of sentiment words</code> and <code>lack of domain words</code>.</font></p>
-<br/>
 
-<p>The earliest research on text sentiment analysis based on <font color=red>machine learning</font> used <code>naive Bayesian algorithm</code>,<code>maximum entropy alogorithm</code> and <code>SVM algorithm</code>. </p>
-<p><strong>Goldberg</strong> - A graph-based semi-supervised classification algorithm.</p>
-<p><strong>Wang</strong> - A high-dimensional mixed feature sentiment analysis model based on SVM.</p>
-<p><font color=orange>Sentiment analysis mthod based on machine learning tends to be more accurate, but it relies on the quality of the corpus labeled wityh polarity.</font> &lt;依赖于语料库的极性标记质量&gt;</p>
-<br/>
 
-<p><strong>Deep learning</strong> into sentiment analysis.</p>
-<ul>
-<li><p>RNTN - a sentiment tree library, which synthesized semantics on the syntactic tree of binary sentiment polarity.</p>
-</li>
-<li><p>CharSCNN - used two convolutional layers to extract the features of related words and sentences, and mined semantic information.</p>
-</li>
-<li><p>RNN - used the Recurrent Neural Network based on time series information to obtain sentence representation.</p>
-</li>
-<li><p>Tree-Structure Long Short-Term Memory Network Model.</p>
-</li>
-<li><p>Attention mechanism into the LSTM.</p>
-</li>
-</ul>
-<br/>
 
-<p><font color=purple>Considering that <strong>the feature words of comments</strong> are <code>sparse</code>, and in order to <strong>better capture the context information</strong>, <strong><code>BiLSTM</code></strong> in deep learning is used to obtain the comment representation in this paper.</font></p>
-<br/>
 
-<h3 id="Word-Representation"><a href="#Word-Representation" class="headerlink" title="### Word Representation"></a>### Word Representation</h3><p>介绍了<code>one-hot representation</code>和<code>Distributed representation</code>.  </p>
-<p>本文将情感信息整合到传统的Tf-IDF算法来计算词语的权重。</p>
-<br/>
 
-<h2 id="Research-Methods"><a href="#Research-Methods" class="headerlink" title="## Research Methods"></a>## Research Methods</h2>
+
+
       
     </div>
 
@@ -509,9 +485,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/paper/" rel="tag"># paper</a>
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
           
-            <a href="/tags/sentiment-analysis/" rel="tag"># sentiment analysis</a>
+            <a href="/tags/LSA/" rel="tag"># LSA</a>
+          
+            <a href="/tags/LDA/" rel="tag"># LDA</a>
           
         </div>
       
@@ -524,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/02/01/paper/20210201-A-Survey-of-the-Applications-of-Sentiment-Analysis/" rel="next" title="A Survey of the Applications of Sentiment Analysis">
-                <i class="fa fa-chevron-left"></i> A Survey of the Applications of Sentiment Analysis
+              <a href="/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/" rel="next" title="Attention机制">
+                <i class="fa fa-chevron-left"></i> Attention机制
               </a>
             
           </div>
@@ -534,8 +512,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/02/04/20210204-PyTorch-TensorBoard%E7%BB%98%E5%88%B6%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E6%9B%B2%E7%BA%BF/" rel="prev" title="PyTorch-TensorBoard绘制损失函数曲线">
-                PyTorch-TensorBoard绘制损失函数曲线 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/04/08/20210408-%E6%A2%AF%E5%BA%A6%E8%A3%81%E5%89%AA(gradient_clip_norm)/" rel="prev" title="梯度裁剪(gradient_clip_norm)">
+                梯度裁剪(gradient_clip_norm) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -613,7 +591,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -624,7 +602,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -635,7 +613,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -675,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sentiment-Analysis-of-Comment-Texts-Based-on-BiLSTM"><span class="nav-number">1.</span> <span class="nav-text"># Sentiment Analysis of Comment Texts Based on BiLSTM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.1.</span> <span class="nav-text">## Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.2.</span> <span class="nav-text">## Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.3.</span> <span class="nav-text">## Background</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-Sentiment-Analysis-Technology"><span class="nav-number">1.3.1.</span> <span class="nav-text">### Text Sentiment Analysis Technology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Word-Representation"><span class="nav-number">1.3.2.</span> <span class="nav-text">### Word Representation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Research-Methods"><span class="nav-number">1.4.</span> <span class="nav-text">## Research Methods</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LSA-LDA-关键词提取"><span class="nav-number">1.</span> <span class="nav-text">LSA&#x2F;LDA - 关键词提取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LSA-潜在语义分析模型"><span class="nav-number">1.1.</span> <span class="nav-text">LSA-潜在语义分析模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PLSA-概率潜在语义分析模型"><span class="nav-number">1.2.</span> <span class="nav-text">PLSA-概率潜在语义分析模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LDA-潜在狄利克雷分配模型"><span class="nav-number">1.3.</span> <span class="nav-text">LDA-潜在狄利克雷分配模型</span></a></li></ol></li></ol></div>
             
 
           </div>

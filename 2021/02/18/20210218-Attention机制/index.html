@@ -83,19 +83,20 @@
 
 
 
-<meta name="description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。   Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Valu">
+<meta name="description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。 Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Value上">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Attention机制">
 <meta property="og:url" content="http://yoursite.com/2021/02/18/20210218-Attention%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="辞">
-<meta property="og:description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。   Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Valu">
+<meta property="og:description" content="转载：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;53682800 Attention机制思想当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些关键的信息输入来进行处理，从而提高神经网络的效率。 Attention计算流程  Attention机制的实质就是个寻址过程。给定一个和任务相关的查询Query向量q，通过计算与Key的注意力分布并附加在Value上">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrheboo6hj30lm01gq2y.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnrhh9z4wwj30ow07swf3.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnttwb4wwzj30gc08w750.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gntubcdjwsj30d4016gli.jpg">
 <meta property="article:published_time" content="2021-02-18T02:19:00.000Z">
-<meta property="article:modified_time" content="2021-02-20T03:16:36.956Z">
+<meta property="article:modified_time" content="2021-02-20T03:31:07.797Z">
 <meta property="article:author" content="Ci">
 <meta property="article:tag" content="nlp">
 <meta property="article:tag" content="attention">
@@ -354,7 +355,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  358 word
+                  433 word
                 </span>
               
 
@@ -393,8 +394,6 @@
       
         <p>转载：<a href="https://zhuanlan.zhihu.com/p/53682800" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/53682800</a></p>
 <h2 id="Attention机制思想"><a href="#Attention机制思想" class="headerlink" title="Attention机制思想"></a>Attention机制思想</h2><p>当用神经网络来处理大量的输入信息时，可以借鉴人脑🧠的注意力机制，只选择一些<strong>关键</strong>的信息输入来进行处理，从而提高神经网络的效率。</p>
-<br/>
-
 <h2 id="Attention计算流程"><a href="#Attention计算流程" class="headerlink" title="Attention计算流程"></a>Attention计算流程</h2><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrh59pxzjj30hs07mwez.jpg" alt="v2-54fe529ded98721f35277a5bfa79febc_r" style="zoom: 67%;" />
 
 <p><strong>Attention机制的实质就是个寻址过程</strong>。给定一个和任务相关的查询<strong>Query</strong>向量q，通过计算与<strong>Key</strong>的注意力分布并附加在<strong>Value</strong>上，从而计算出<strong>Attention Value</strong>。</p>
@@ -416,7 +415,8 @@
 <p>软性注意力机制有两种：普通模式(key=value=X)和键值对模式(key!=value).</p>
 </li>
 </ol>
-
+<h2 id="Attention机制的变种"><a href="#Attention机制的变种" class="headerlink" title="Attention机制的变种"></a>Attention机制的变种</h2><h3 id="变种-多头注意力-Multi-head-Attention"><a href="#变种-多头注意力-Multi-head-Attention" class="headerlink" title="变种-多头注意力(Multi-head Attention)"></a>变种-多头注意力(Multi-head Attention)</h3><p>多头注意力(Multi-head Attention)是利用多个查询Q=[q_1,…,q_M]，来平行地计算从从输入信息中选取多个信息。每个注意力关注输入信息的不同部分，然后进行拼接：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntubcdjwsj30d4016gli.jpg" alt="v2-27673fff36241d6ef163c9ac1cedcce7_r" style="zoom:67%;" />
       
     </div>
 
@@ -499,6 +499,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2021/02/24/2021224-LSA&LDA/" rel="prev" title="LSA&LDA">
+                LSA&LDA <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -574,7 +578,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -585,7 +589,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -596,7 +600,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -636,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention机制思想"><span class="nav-number">1.</span> <span class="nav-text">Attention机制思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention计算流程"><span class="nav-number">2.</span> <span class="nav-text">Attention计算流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三步"><span class="nav-number">2.1.</span> <span class="nav-text">三步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息输入"><span class="nav-number">2.1.1.</span> <span class="nav-text">信息输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算注意力分布-alpha"><span class="nav-number">2.1.2.</span> <span class="nav-text">计算注意力分布$\alpha$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据注意力分布-alpha-计算输入信息的加权平均"><span class="nav-number">2.1.3.</span> <span class="nav-text">根据注意力分布$\alpha$计算输入信息的加权平均</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention机制思想"><span class="nav-number">1.</span> <span class="nav-text">Attention机制思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention计算流程"><span class="nav-number">2.</span> <span class="nav-text">Attention计算流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三步"><span class="nav-number">2.1.</span> <span class="nav-text">三步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息输入"><span class="nav-number">2.1.1.</span> <span class="nav-text">信息输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算注意力分布-alpha"><span class="nav-number">2.1.2.</span> <span class="nav-text">计算注意力分布$\alpha$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据注意力分布-alpha-计算输入信息的加权平均"><span class="nav-number">2.1.3.</span> <span class="nav-text">根据注意力分布$\alpha$计算输入信息的加权平均</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attention机制的变种"><span class="nav-number">3.</span> <span class="nav-text">Attention机制的变种</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变种-多头注意力-Multi-head-Attention"><span class="nav-number">3.1.</span> <span class="nav-text">变种-多头注意力(Multi-head Attention)</span></a></li></ol></li></ol></div>
             
 
           </div>
